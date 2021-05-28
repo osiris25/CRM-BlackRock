@@ -6,16 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { ProductsComponent } from './components/products/products.component';
-import { ClientsComponent } from './components/clients/clients.component';
 import { CustomersComponent } from './components/customers/customers.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProductsComponent,
-    ClientsComponent,
-    CustomersComponent
+    CustomersComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
