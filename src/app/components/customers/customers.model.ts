@@ -4,5 +4,6 @@ export default class Customer{
     email?: string;
     phone?: string;
     company?: string;
-    priority?: [];
+    priority?: string;
+    customerType?: string;
   }
