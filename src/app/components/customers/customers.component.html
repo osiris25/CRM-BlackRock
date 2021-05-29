@@ -1,0 +1,23 @@
+<div>
+  <label for="title">Nombre del cliente</label>
+  <input type="text" id="name" required [(ngModel)]="customer.name" name="name" />
+  <label for="title">Telefono</label>
+  <input type="phone" id="phone" required [(ngModel)]="customer.phone" name="phone" />
+  <label for="title">Email</label>
+  <input type="text" id="email" required [(ngModel)]="customer.email" name="email" />
+  <label for="title">Compañía</label>
+  <input type="text" id="company" required [(ngModel)]="customer.company" name="company" />
+  <label for="title">Prioridad</label>
+  <select name="priority" id="priority" [(ngModel)]="customer.priority">
+    <option value="Alta">Alta</option>
+    <option value="Media">Media</option>
+    <option value="Baja">Baja</option>
+  </select>
+  <label for="title">Tipo de cliente</label>
+  <select name="type" id="priority" [(ngModel)]="customer.customerType">
+    <option value="Potencial">Potencial</option>
+    <option value="Existente">Existente</option>
+  </select>
+
+  <button (click)="saveCustomer()">Submit</button>
+</div>
