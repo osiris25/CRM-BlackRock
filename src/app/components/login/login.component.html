@@ -1,1 +1,23 @@
-<p>login works!</p>
+<div>
+<div>
+	<button (click)="logout()">Logout</button>
+</div>
+	<div>
+		<div>
+			<label>Email</label>
+			<div>
+				<input [(ngModel)]="email" name="email" />
+			</div>
+		</div>
+		<div>
+			<label>Password</label>
+			<div>
+				<input type="password" [(ngModel)]="password" name="password" />
+			</div>
+		</div>
+		<div>
+			<button (click)="customLogin()">Login with Email</button>
+		</div>
+	</div>
+
+
