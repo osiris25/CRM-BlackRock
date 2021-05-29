@@ -25,9 +25,10 @@ export class CustomersComponent implements OnInit {
   }
 
   onOptionsSelected(e:any) {
-    // e.preventDefault();
-    console.log(this.customer);
-    this.customer=e.target.value;
+    //e.preventDefault();
+    console.log(this.customer.priority);
+    //this.customer.priority=e.target.value;
+    //return false;
   }
 
   newTutorial(): void {
