@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomersService } from './customerService/customers.service';
+import Customer from './customers.model';
 
 @Component({
   selector: 'app-customers',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+  customer: Customer = new Customer();
+  submitted = false;
+
+  constructor(private CustomersService: CustomersService) { }
 
   ngOnInit(): void {
+  }
+
+  saveCustomer(): void {
+    this.CustomersService.create(this.customer).then(() => {
+      console.log('Created new item successfully!');
+      this.submitted = true;
+    });
+  }
+
+  onOptionsSelected(e:any) {
+    // e.preventDefault();
+    console.log(this.customer);
+    this.customer=e.target.value;
+  }
+
+  newTutorial(): void {
+    this.submitted = false;
+    this.customer = new Customer();
   }
 
 }
