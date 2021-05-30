@@ -12,9 +12,12 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableCustumersComponent } from './shared/table-custumers/table-custumers.component';
 import { MaterialModule } from './material/material.module';
+import { ModalComponent } from './shared/components/modal/modal.component';
+import { CreateCustomerModule } from './components/customers/create-customer/create-customer.module';
+import { CreateCustomerComponent } from './components/customers/create-customer/create-customer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { MaterialModule } from './material/material.module';
     ProductsComponent,
     CustomersComponent,
     HomeComponent,
-    TableCustumersComponent
+    TableCustumersComponent,
+    ModalComponent,
+    CreateCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +39,11 @@ import { MaterialModule } from './material/material.module';
     AngularFirestoreModule,
     FormsModule,
     AngularFireAuthModule,
-    MaterialModule
+    MaterialModule,
+    CreateCustomerModule,
+    ReactiveFormsModule 
   ],
+  entryComponents:[ModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

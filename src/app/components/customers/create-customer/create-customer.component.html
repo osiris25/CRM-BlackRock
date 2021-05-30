@@ -1,0 +1,43 @@
+<div class="new-customer-container">
+    <form [formGroup]="newCustomerForm" (ngSubmit)="addNewCustomer(newCustomerForm.value)">
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre del cliente" type="text" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Correo</mat-label>
+            <input matInput placeholder="correo" type="text" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Teléfono</mat-label>
+            <input matInput placeholder="teléfono" type="text" formControlName="phone">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Compañía</mat-label>
+            <input matInput placeholder="Compañía" type="text" formControlName="company">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select  placeholder="Prioridad" multiple formControlName="priority" >
+                <mat-option value="Ata">Alta</mat-option>
+                <mat-option value="Media">Media</mat-option>
+                <mat-option value="Baja">Baja</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select  placeholder="Tipo de cliente" multiple formControlName="customerType" >
+                <mat-option value="Ata">Potencial</mat-option>
+                <mat-option value="Media">Existente</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="container-button">
+            <input type="submit" class="mat-flat-button" value="Guardar">
+        </div>
+
+    </form>
+</div>
