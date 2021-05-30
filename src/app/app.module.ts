@@ -18,6 +18,7 @@ import { MaterialModule } from './material/material.module';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { CreateCustomerModule } from './components/customers/create-customer/create-customer.module';
 import { CreateCustomerComponent } from './components/customers/create-customer/create-customer.component';
+import { PromotersComponent } from './components/promoters/promoters.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CreateCustomerComponent } from './components/customers/create-customer/
     TableCustumersComponent,
     ModalComponent,
     CreateCustomerComponent
+    PromotersComponent,
   ],
   imports: [
     BrowserModule,

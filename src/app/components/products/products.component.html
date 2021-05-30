@@ -1,1 +1,47 @@
-<p>products works!</p>
+<div *ngFor="let product of productData">
+    <div class="container">
+      <h1>{{product.name}}</h1> 
+      <div>
+        <h5 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+          <p *ngIf="item.key=='badge'">{{item.value}}</p>
+        </h5>
+        <h5 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+          <p *ngIf="item.key=='assets'">{{item.value}}</p>
+        </h5>
+      </div>
+      <div>
+        <h3><b>Objetivo:</b></h3><p>{{product.objective}}</p>
+      </div>
+      <div class="container-descriptions">
+        <div>
+          <h5>NAV a {{product.dateTheoreticalPrice}}</h5>
+          <h3><b>{{product.theoreticalPrice}}</b></h3>
+        </div>
+        <div>
+          <h2 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+            <p *ngIf="item.key=='commissions'">Comisiones: {{item.value}}%</p>
+          </h2>
+          <h2 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+            <p *ngIf="item.key=='duration'">Duración efectiva: {{item.value}}%</p>
+          </h2>
+        </div>
+        <div>
+          <h2 *ngFor = "let item of product.performance | keyvalue; let i=index;">
+            <p *ngIf="item.key=='annualPercentage'">Porcentaje anual: {{item.value}}%</p>
+          </h2>
+        </div>
+        <div>
+          <h2>Porcentajes</h2>
+          <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
+            <span *ngIf="item.key=='year'">A un año: {{item.value}}%</span>
+          </p>
+          <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
+            <span *ngIf="item.key=='atThree'">A tres años: {{item.value}}%</span>
+          </p>
+          <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
+            <span *ngIf="item.key=='atFive'">A cinco años: {{item.value}}%</span>
+          </p>
+        </div>
+      </div>
+      <p>______________________</p>
+    </div>
