@@ -19,8 +19,8 @@ export class CustomersService {
     return this.customerRef;
   }
 
-  create(tutorial: Customer): any {
-    return this.customerRef.add({ ...tutorial });
+  create(customer: Customer): any {
+    return this.customerRef.add({ ...customer });
   }
 
   update(id: string, data: any): Promise<void> {

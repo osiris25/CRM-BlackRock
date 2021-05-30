@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
+import { PromotersComponent } from './components/promoters/promoters.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     ProductsComponent,
     CustomersComponent,
-    HomeComponent
+    HomeComponent,
+    PromotersComponent
   ],
   imports: [
     BrowserModule,
