@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.loginContainer{
+  background-image: url('../../../assets/img/skateboard.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+.firstContainer{
+  width: 50%;
+  height: 100%;
+}
+
+.firstContainer span{
+margin: 50px 0 0 15px;
+display:inline-block;
+text-align: center;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 70px;
+}
+
+.secondContainer{
+  left: 50%;
+  width:50%;
+  height: 100%;
+  position: absolute;
+ /* background-color: #FFFFFF;
+  opacity: 0.6;*/
+}
+
+.welcome{
+  font-family: 'Noto Sans', sans-serif;
+  width: 90%;
+  margin: 50px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  display: inline-block;
+  text-align: left;
+}
+
+.welcome h2{
+  font-size: 35px;
+}
+
+.wlcm{
+  font-size: 20px;
+}
+
+.text-center{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 25px;
+  margin: 130px;
+  margin-bottom: 80px;
+  margin-left: 60px;
+  display: inline-block;
+  text-align: left;
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*label{
+  font-family: 'Noto Sans', sans-serif;
+}*/
+
+.email-container, .pass-container{
+  position:relative;
+  margin-bottom: 25px;
+}
+
+.email-container label{
+  position: absolute;
+	top:0px;
+	left:0px;
+	font-size:18px;
+	color:#979797;
+  pointer-events:none;
+	transition: all 0.5s ease-in-out;
+}
+
+.pass-container label{
+  position:absolute;
+	top:0px;
+	left:0px;
+	font-size:18px;
+	color:#979797;
+  pointer-events:none;
+	transition: all 0.5s ease-in-out;
+}
+
+.email-container input{
+  border:0;
+  border-bottom:2px solid #979797;
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#000000;
+}
+
+.pass-container input{
+  border:0;
+  border-bottom:2px solid #979797;
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#000000;
+}
+
+.email-container input:focus{
+  border:none;
+  outline:none;
+  border-bottom:1px solid #FE4021;
+ }
+
+ .pass-container input:focus{
+  border:none;
+  outline:none;
+  border-bottom:1px solid #FE4021;
+ }
+
+ .btnL{
+	color:#000000;
+	background-color:#FE4021;
+	outline: none;
+  border: 0;
+  color: #000000;
+	padding:10px 20px;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+}
+
+.email-container input:focus ~ label,
+.email-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+}
+
+.pass-container input:focus ~ label,
+.pass-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+}
+
+.logout{
+  display:none;
+}
+
+/*.inputForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+  width: 90%;
+  border: 0;
+  border-bottom: 2px #979797;
+  outline: 0;
+  padding: 10px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.emailInput, .passInput{
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #979797;
+  width:70%;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  color: transparent;
+}
+
+.form__label{
+    position: absolute;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #000000;
+  }
+
+.btnLogin{
+  margin: 55px;
+}
+
+.btnL{
+  background-color: #FE4021;
+  position: absolute;
+  width: 182px;
+  height: 50px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  border-color: #FE4021;
+}*/
+
+
+
+
+
