@@ -1,0 +1,13 @@
+<div *ngFor="let promoter of promoterData">
+    <img src="{{promoter.photo}}" alt="" width="200" height="200">
+    <div class="container">
+      <h3><b>{{promoter.bank}}</b></h3> 
+			<h4><b>{{promoter.name}}</b></h4> 
+      <p>{{promoter.phone}}</p> 
+			<p>{{promoter.email}}</p>
+      <p>iShares</p>
+      <hr>
+      <p *ngFor="let ishare of promoter.product">{{ishare}}</p>
+    </div>
+  </div>
+
