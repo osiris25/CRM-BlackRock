@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomersComponent } from './components/customers/customers.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { OpportunityComponent } from './components/opportunity/opportunity.component';
 import { ProductsComponent } from './components/products/products.component';
 import { PromotersComponent } from './components/promoters/promoters.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -12,6 +13,7 @@ const routes: Routes = [
 	{path:"home", component:HomeComponent, canActivate:[AuthGuard]},
 	{path:"customers", component:CustomersComponent, canActivate:[AuthGuard]},
 	{path:"products", component:ProductsComponent, canActivate:[AuthGuard]},
+	{path:"opportunity", component:OpportunityComponent, canActivate:[AuthGuard]},
 	{path:"promoters", component:PromotersComponent, canActivate:[AuthGuard]},
 ];
 

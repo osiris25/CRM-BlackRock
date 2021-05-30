@@ -22,7 +22,7 @@ import { PromotersComponent } from './components/promoters/promoters.component';
     ProductsComponent,
     CustomersComponent,
     HomeComponent,
-    PromotersComponent
+    PromotersComponent,
   ],
   imports: [
     BrowserModule,
