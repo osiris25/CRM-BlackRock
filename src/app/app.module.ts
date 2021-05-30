@@ -15,7 +15,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { PromotersComponent } from './components/promoters/promoters.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
