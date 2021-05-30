@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import Customer from '../customers.model';
+// import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class CustomersService {
    getAll(): AngularFirestoreCollection<Customer> {
     return this.customerRef;
   }
-
+  
   create(tutorial: Customer): any {
     return this.customerRef.add({ ...tutorial });
   }

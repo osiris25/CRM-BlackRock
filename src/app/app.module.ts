@@ -13,6 +13,8 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
+import { TableCustumersComponent } from './shared/table-custumers/table-custumers.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     ProductsComponent,
     CustomersComponent,
-    HomeComponent
+    HomeComponent,
+    TableCustumersComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FormsModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
