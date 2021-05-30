@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/internal/operators';
 import Product from './products.model';
 import { ProductsService } from './productsServices/products.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -10,6 +11,7 @@ import { ProductsService } from './productsServices/products.service';
 })
 export class ProductsComponent implements OnInit {
   productData?: Product[];
+  keys?: any;
   constructor(private ProductsService: ProductsService) {}
 
   ngOnInit(): void {
@@ -31,4 +33,5 @@ export class ProductsComponent implements OnInit {
         this.productData = data;
       });
   }
+  
 }
