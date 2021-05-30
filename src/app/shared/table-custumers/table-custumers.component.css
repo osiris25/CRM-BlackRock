@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .container-btn-new {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 1.5rem -0.6rem;
+  }
+  .container-btn-new button {
+    width: 25%;
+    color: #fff;
+    background-color: orange;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+  }

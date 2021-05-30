@@ -12,7 +12,12 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TableCustumersComponent } from './shared/table-custumers/table-custumers.component';
+import { MaterialModule } from './material/material.module';
+import { ModalComponent } from './shared/components/modal/modal.component';
+import { CreateCustomerModule } from './components/customers/create-customer/create-customer.module';
+import { CreateCustomerComponent } from './components/customers/create-customer/create-customer.component';
 import { PromotersComponent } from './components/promoters/promoters.component';
 
 @NgModule({
@@ -22,6 +27,9 @@ import { PromotersComponent } from './components/promoters/promoters.component';
     ProductsComponent,
     CustomersComponent,
     HomeComponent,
+    TableCustumersComponent,
+    ModalComponent,
+    CreateCustomerComponent
     PromotersComponent,
   ],
   imports: [
@@ -32,8 +40,12 @@ import { PromotersComponent } from './components/promoters/promoters.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FormsModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MaterialModule,
+    CreateCustomerModule,
+    ReactiveFormsModule 
   ],
+  entryComponents:[ModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
