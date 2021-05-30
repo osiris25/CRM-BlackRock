@@ -1,3 +1,4 @@
+<!-- ESTA PARTE SE VA A MANDAR A UN MODAL PERO AUN NO SABEMOS COMO MANIPULAR EL MENU -->
 <div>
   <label for="title">Nombre del cliente</label>
   <input type="text" id="name" required [(ngModel)]="customer.name" name="name" />
@@ -21,3 +22,21 @@
 
   <button (click)="saveCustomer()">Submit</button>
 </div>
+<!-- ESTA PARTE ES LA TABLA DONDE SE PINTA LA BASE DE LOS CLIENTES -->
+<table >
+  <caption>Clientes</caption>
+  <tbody>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Telefono</th>
+    </tr>
+    <tr *ngFor=" let customer of customerData; let i = index">
+      <th>{{i+1}}</th>
+      <th>{{customer.name}}</th>
+      <th>{{customer.phone}}</th>
+    </tr>
+  </tbody>
+</table>
+
+
