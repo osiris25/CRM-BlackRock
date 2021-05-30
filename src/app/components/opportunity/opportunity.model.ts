@@ -5,4 +5,5 @@ export default class Opportunity {
     id_promoter?: string;
     price?: string;
     status?: string;
+
   }

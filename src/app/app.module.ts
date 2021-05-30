@@ -13,7 +13,8 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
-import { OpportunityComponent } from './components/opportunity/opportunity.component';
+import { PromotersComponent } from './components/promoters/promoters.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { OpportunityComponent } from './components/opportunity/opportunity.compo
     ProductsComponent,
     CustomersComponent,
     HomeComponent,
-    OpportunityComponent
+    PromotersComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,28 +1,5 @@
-<!--
-<div>
-	<label for="title">Nombre del cliente</label>
-	<input type="text" id="name" required [(ngModel)]="opportunity.id" name="name" />
-	<label for="title">Telefono</label>
-	<input type="phone" id="phone" required [(ngModel)]="opportunity.phone" name="phone" />
-	<label for="title">Email</label>
-	<input type="text" id="email" required [(ngModel)]="opportunity.email" name="email" />
-	<label for="title">Compañía</label>
-	<input type="text" id="company" required [(ngModel)]="opportunity.company" name="company" />
-	<label for="title">Prioridad</label>
-	<select name="priority" id="priority" [(ngModel)]="opportunity.priority">
-		<option value="Alta">Alta</option>
-		<option value="Media">Media</option>
-		<option value="Baja">Baja</option>
-	</select>
-	<label for="title">Tipo de cliente</label>
-	<select name="type" id="priority" [(ngModel)]="opportunity.customerType">
-		<option value="Potencial">Potencial</option>
-		<option value="Existente">Existente</option>
-	</select>
-
-	<button (click)="saveOpportunity()">Submit</button>
-</div>
-
+<!-- {{CustomersData}}
+<p *ngFor=" let customer of CustomersData;">customer</p>
 <table>
 	<caption>Clientes</caption>
 	<tbody>
@@ -31,7 +8,13 @@
 			<th>Nombre</th>
 			<th>Telefono</th>
 		</tr>
-		<tr *ngFor=" let customer of opportunityData; let i = index">
+		<tr *ngFor=" let customer of CustomersData; let i = index">
+			<th>{{i+1}}</th>
+			<th>{{customer.name}}</th>
+			<th>{{customer.phone}}</th>
+		</tr>
+		<tr *ngFor=" let customer of CustomersData; let i = index">
+			<p *ngIf="customer.CustomersData =='email'">Email: {{customer.value}}</p>
 			<th>{{i+1}}</th>
 			<th>{{customer.name}}</th>
 			<th>{{customer.phone}}</th>
