@@ -23,7 +23,6 @@ export class CustomersComponent implements OnInit {
   saveCustomer(): void {
     this.CustomersService.create(this.customer).then(() => {
       console.log('Created new item successfully!');
-      this.submitted = true;
     });
   }
 

@@ -29,7 +29,7 @@ import { PromotersComponent } from './components/promoters/promoters.component';
     HomeComponent,
     TableCustumersComponent,
     ModalComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
     PromotersComponent,
   ],
   imports: [
@@ -43,7 +43,7 @@ import { PromotersComponent } from './components/promoters/promoters.component';
     AngularFireAuthModule,
     MaterialModule,
     CreateCustomerModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule
   ],
   entryComponents:[ModalComponent],
   providers: [],
