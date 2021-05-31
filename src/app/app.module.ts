@@ -45,7 +45,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     AngularFireAuthModule,
     MaterialModule,
     CreateCustomerModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule
   ],
   entryComponents:[ModalComponent],
   providers: [],

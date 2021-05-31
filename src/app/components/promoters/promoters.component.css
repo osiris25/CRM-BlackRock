@@ -1,0 +1,73 @@
+.card-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.card-box{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.promoter-card{
+  display:block;
+  background: #FFFFFF;
+  width: 20%;
+  max-height: 30%;
+  border-radius: 2px;
+  margin: 3%;
+  display:inline-block;
+  /*text-align: center;*/
+  align-items: center;
+  transition: all .25s linear;
+  border-color: #FFFFFF;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+}
+
+.promoter-card:hover{
+  box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.bank-img{
+ height: 10%;
+ width:8%;
+ margin-top: -15px;
+}
+
+.contact-promoter{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ width: 90%;
+ margin: 5%
+}
+
+.phone-promoter, .email-promoter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.email-img, .call-img{
+  height: 10%;
+  width:10%;
+}
+
+.ishare-info{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.ishare{
+  margin-left: 5%;
+}
