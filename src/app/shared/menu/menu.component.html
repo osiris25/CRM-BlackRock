@@ -1,0 +1,67 @@
+<mat-toolbar class="navbar">
+    <span class="primary" (click)="opened = !opened" >
+        <mat-icon>menu</mat-icon>
+    </span>
+    <a routerLink="/home" class="logo">
+        <span>BlackRock</span>
+    </a>
+    <div class="usertools">
+        <span><mat-icon class="mat-18">notifications</mat-icon></span>
+        <span>Bienvenido, Carlos Habana</span>
+        <mat-icon class="mat-18">account_circle</mat-icon>
+    </div>
+</mat-toolbar>
+<mat-sidenav-container class="side-container">
+    <mat-sidenav #sideNav [(opened)]="opened" mode="side" class="side">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/home">
+                <mat-icon class="mat-18">home</mat-icon>Inicio
+            </a>
+        </mat-nav-list>
+
+        <mat-divider></mat-divider>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="/customers">
+                <mat-icon class="mat-18">face</mat-icon>Clientes
+            </a>
+        </mat-nav-list>
+
+        
+        <mat-nav-list>
+            <a mat-list-item routerLink="/promoters">
+                <mat-icon class="mat-18">supervised_user_circle</mat-icon>Promotores
+            </a>
+        </mat-nav-list>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="/products">
+                <mat-icon class="mat-18">paid</mat-icon>Productos
+            </a>
+        </mat-nav-list>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="/opportunity">
+                <mat-icon class="mat-18">folder_special</mat-icon>Oportunidades
+            </a>
+        </mat-nav-list>
+        
+        <mat-nav-list>
+            <a mat-list-item routerLink="/">
+                <mat-icon class="mat-18">insert_chart</mat-icon>Reportes
+            </a>
+        </mat-nav-list>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="/" class="logout">
+                <mat-icon class="mat-18">logout</mat-icon>Salir
+            </a>
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

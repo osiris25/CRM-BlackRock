@@ -19,6 +19,7 @@ import { ModalComponent } from './shared/components/modal/modal.component';
 import { CreateCustomerModule } from './components/customers/create-customer/create-customer.module';
 import { CreateCustomerComponent } from './components/customers/create-customer/create-customer.component';
 import { PromotersComponent } from './components/promoters/promoters.component';
+import { MenuComponent } from './shared/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,9 @@ import { PromotersComponent } from './components/promoters/promoters.component';
     HomeComponent,
     TableCustumersComponent,
     ModalComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
     PromotersComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
