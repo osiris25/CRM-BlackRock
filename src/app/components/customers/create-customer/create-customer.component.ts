@@ -21,7 +21,7 @@ export class CreateCustomerComponent implements OnInit {
     email: new FormControl(''),
     phone: new FormControl(''),
     priority: new FormControl('', Validators.required),
-    conpany: new FormControl('', Validators.required),
+    company: new FormControl('', Validators.required),
     customerType: new FormControl('', Validators.required),
   })
 

@@ -12,8 +12,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../components/modal/modal.component';
 
 
-
-
 @Component({
   selector: 'app-table-custumers',
   templateUrl: './table-custumers.component.html',
@@ -22,17 +20,13 @@ import { ModalComponent } from '../components/modal/modal.component';
 
 export class TableCustumersComponent implements OnInit, AfterViewInit {
   dataSource = new MatTableDataSource<Customer>();
-   customerData?: Customer[] | undefined;
-  //customer: Customer = new Customer();
+  customerData?: Customer[] | undefined;
+  // currentCustomer?: Customer;
+  // currentIndex = "";
   
   ngOnInit(): void {
     this.getCustomers();
-    
-
   }
-
-  
-
 
   displayedColumns: string[] = ['name', 'email', 'phone', 'company', 'priority', 'actions', ];
   @ViewChild(MatPaginator, { static: true })
@@ -79,14 +73,21 @@ ngAfterViewInit() {
     })
   }
   onEditPost(customer:any){
-    console.log('Edit customer', customer )
+    console.log('Edit');
+    this.openDialog(customer);
   }
   onNewPost() {
     this.openDialog();
-
   }
-  openDialog(): void {
-    const dialogRef = this.dialog.open(ModalComponent);
+  openDialog(customer?:Customer): void {
+    const config ={
+      data:{
+        message: customer ? 'Editar cliente' : 'Agregar cliente',
+        content: customer
+      }
+    };
+
+    const dialogRef = this.dialog.open(ModalComponent, config);
     dialogRef.afterClosed().subscribe(result => {
       console.log('Open');
       

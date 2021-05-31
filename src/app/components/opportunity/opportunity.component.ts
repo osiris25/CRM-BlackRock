@@ -15,10 +15,10 @@ import Promoter from '../promoters/promoters.model';
   styleUrls: ['./opportunity.component.css']
 })
 export class OpportunityComponent implements OnInit {
-	opportunityData?: Opportunity[];
-	CustomersData?: Customer[];
-	PromotersData?: Promoter[];
-	ProductsData?: Product[];
+	opportunityData?: Opportunity[]= [];
+	CustomersData?: Customer[]=[];
+	PromotersData?: Promoter[]=[];
+	ProductsData?: Product[]=[];
   opportunity: Opportunity = new Opportunity();
   submitted = false;
 
@@ -51,7 +51,7 @@ export class OpportunityComponent implements OnInit {
       )
     ).subscribe(data => {
       this.CustomersData = data;
-		console.log(this.CustomersData[0].company);
+		console.log(this.CustomersData);
 
     });
   }
