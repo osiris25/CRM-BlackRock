@@ -17,6 +17,7 @@ import { CreateCustomerModule } from './components/customers/create-customer/cre
 import { PromotersComponent } from './components/promoters/promoters.component';
 import { CustomersModule } from './components/customers/customers.module';
 import { OpportunityModule } from './components/opportunity/opportunity.module';
+import { MenuComponent } from './shared/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { OpportunityModule } from './components/opportunity/opportunity.module';
     ProductsComponent,
     HomeComponent,
     ModalComponent,
+    CreateCustomerComponent,
     PromotersComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +41,9 @@ import { OpportunityModule } from './components/opportunity/opportunity.module';
     AngularFireAuthModule,
     MaterialModule,
     CreateCustomerModule,
-    //ReactiveFormsModule,
     CustomersModule,
     OpportunityModule,
+    ReactiveFormsModule
   ],
   entryComponents: [ModalComponent],
   providers: [],
