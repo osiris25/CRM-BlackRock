@@ -19,6 +19,7 @@ export class EditCustomerComponent implements OnInit {
     ) {}
 
   public editCustomerForm =  this.fb.group({
+    id: new FormControl(''),
     name: new FormControl('', Validators.required),
     email: new FormControl(''),
     phone: new FormControl(''),
@@ -31,10 +32,12 @@ export class EditCustomerComponent implements OnInit {
     this.initValuesForm();
   }
 
-  editCustomer(data: Customer) {
-     console.log('Nuevo cliente', data);
-     this.customerInput = data;
-    // this.saveCustomer();
+  editCustomer(customer: Customer) {
+     //console.log(customerId, typeof(customerId) );
+     this.CustomersService.updateCustomer(customer)
+       .then(() => ('The tutorial was updated successfully!'))
+       .catch((err) => console.log(err));
+       
   }
 
   private initValuesForm(): void {

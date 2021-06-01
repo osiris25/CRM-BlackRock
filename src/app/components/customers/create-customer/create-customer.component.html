@@ -21,22 +21,22 @@
         </mat-form-field>
 
         <mat-form-field>
-            <mat-select  placeholder="Prioridad" multiple formControlName="priority" >
-                <mat-option value="Ata">Alta</mat-option>
+            <mat-select  placeholder="Prioridad" formControlName="priority" >
+                <mat-option value="Alta">Alta</mat-option>
                 <mat-option value="Media">Media</mat-option>
                 <mat-option value="Baja">Baja</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field>
-            <mat-select  placeholder="Tipo de cliente" multiple formControlName="customerType" >
-                <mat-option value="Ata">Potencial</mat-option>
-                <mat-option value="Media">Existente</mat-option>
+            <mat-select  placeholder="Tipo de cliente" formControlName="customerType" >
+                <mat-option value="Potencial">Potencial</mat-option>
+                <mat-option value="Existente">Existente</mat-option>
             </mat-select>
         </mat-form-field>
 
         <div class="container-button">
-            <input type="submit" class="mat-flat-button" value="Guardar">
+            <input type="submit"  mat-dialog-close class="mat-flat-button" value="Guardar">
         </div>
 
     </form>
