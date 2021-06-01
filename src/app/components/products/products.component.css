@@ -11,6 +11,7 @@
   width: 70%;
   max-height: 30%;
   border-radius: 2px;
+  border: #FFCE00;
   margin: 3%;
   display: inline block;
   /*text-align: center;*/
@@ -118,9 +119,26 @@ padding:10px;
   align-items: center;
 }
 
-.text-info-card{
-  
-  margin-left: -10px;
+@media (max-width: 768px){
+  .products-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.products-card{
+width: 50%;
+padding:10px;
+}
+
+.products-card-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .text-container{
