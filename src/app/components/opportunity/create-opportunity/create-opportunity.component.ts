@@ -1,7 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup , FormControl, Validators} from '@angular/forms';
 import Opportunity from '../opportunity.model';
 import { OpportunityService } from '../opportunityService/opportunity.service';
+import { OpportunityComponent } from '../opportunity.component';
+import { CustomersService } from '../../customers/customerService/customers.service';
+import { map } from 'rxjs/internal/operators';
+import Customer from '../../customers/customers.model';
+import { PromotersService } from '../../promoters/promoterService/promoters.service';
+import Promoter from '../../promoters/promoters.model';
+import Product from '../../products/products.model';
+import { ProductsService } from '../../products/productsServices/products.service';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-create-opportunity',
@@ -12,20 +21,34 @@ export class CreateOpportunityComponent implements OnInit {
 
   customerData?: Opportunity[];
   customer: Opportunity = new Opportunity();
+  CustomersData?: Customer[]=[];
+  PromotersData?: Promoter[]=[];
+  ProductsData?: Product[]=[];
   submitted = false;
 
-  constructor(private OpportunityService: OpportunityService) { }
+  opcionSeleccionado: string  = '0';
+  verSeleccion: string | undefined = '';
 
-  public newCustomerForm = new FormGroup ({
-    name: new FormControl('', Validators.required),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    priority: new FormControl('', Validators.required),
-    company: new FormControl('', Validators.required),
-    customerType: new FormControl('', Validators.required),
+  constructor(
+    private OpportunityService: OpportunityService,
+    private CustomerService: CustomersService,
+    private PromoterService: PromotersService,
+    private ProductService: ProductsService,
+    ) { }
+
+  public newOpportunityForm = new FormGroup ({
+    id: new FormControl('', Validators.required),
+    id_customer: new FormControl(''),
+    id_product: new FormControl(''),
+    id_promoter: new FormControl('', Validators.required),
+    price: new FormControl('', Validators.required),
+    status: new FormControl('', Validators.required),
   })
 
   ngOnInit(): void {
+    this.filterCustomers();
+    this.filterPromoters();
+    this.filterProduct();
   }
 
   addNewCustomer(data: Opportunity) {
@@ -39,5 +62,69 @@ export class CreateOpportunityComponent implements OnInit {
       this.submitted = true;
     });
   }
+
+
+  filterCustomers(): void {
+    this.CustomerService.getAll().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(data => {
+      this.CustomersData = data;
+		console.log(this.CustomersData);
+
+    });
+  }
+
+  filterPromoters(): void {
+    this.PromoterService.getAll().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(data => {
+      this.PromotersData = data;
+		console.log("promotores",this.PromotersData);
+
+    });
+  }
+
+  filterProduct(): void {
+    this.ProductService.getAll().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(data => {
+      this.ProductsData = data;
+		console.log("producto",this.ProductsData);
+
+    });
+  }
+
+  capturar(e:MatSelectChange ) {
+    // Pasamos el valor seleccionado a la variable verSeleccion
+    console.log(this.opcionSeleccionado);
+    this.verSeleccion = this.ProductsData?.filter(element=>{
+      return element.id==this.opcionSeleccionado
+    })[0].keyFactor?.badge;
+}
+
+addNewOpportunity(data: Customer) {
+  console.log('Nuevo cliente', data);
+  this.customer = data;
+  this.saveOpportunity();
+}
+saveOpportunity(): void {
+  this.OpportunityService.create(this.customer).then(() => {
+    console.log('Created new item successfully!');
+    this.submitted = true;
+  });
+}
+
 }
 

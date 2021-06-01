@@ -76,17 +76,34 @@ ngAfterViewInit() {
 
   onEditPost(customer:any){
     console.log('Edit');
-    this.openDialog(customer);
+    this.openDialog2(customer);
   }
   onNewPost() {
     this.openDialog();
   }
+
   openDialog(customer?:Customer): void {
     const config ={
       data:{
         message: customer ? 'Editar cliente' : 'Agregar cliente',
         content: customer,
-        view: 'customer'
+        view: 'createcustomer'
+      }
+    };
+
+    const dialogRef = this.dialog.open(ModalComponent, config);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Open');
+
+    })
+  }
+
+  openDialog2(customer?:Customer): void {
+    const config ={
+      data:{
+        message: customer ? 'Editar cliente' : 'Agregar cliente',
+        content: customer,
+        view: 'editcustomer'
       }
     };
 
