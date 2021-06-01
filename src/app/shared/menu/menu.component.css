@@ -23,5 +23,12 @@
     background-color: #FFCE00;
 }
 .usertools {
-    text-align: right;
+    position: absolute;
+    right: 30px;
+}
+@media (min-width: 300px) and (max-width: 600px) {
+    .usertools {
+        display: none;
+        color: #fff;
+    }
 }

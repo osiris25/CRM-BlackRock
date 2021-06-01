@@ -11,7 +11,6 @@ import Swal from 'sweetalert2';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../components/modal/modal.component';
 
-
 @Component({
   selector: 'app-table-custumers',
   templateUrl: './table-custumers.component.html',
@@ -77,16 +76,34 @@ ngAfterViewInit() {
 
   onEditPost(customer:any){
     console.log('Edit');
-    this.openDialog(customer);
+    this.openDialog2(customer);
   }
   onNewPost() {
     this.openDialog();
   }
+
   openDialog(customer?:Customer): void {
     const config ={
       data:{
         message: customer ? 'Editar cliente' : 'Agregar cliente',
-        content: customer
+        content: customer,
+        view: 'createcustomer'
+      }
+    };
+
+    const dialogRef = this.dialog.open(ModalComponent, config);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Open');
+
+    })
+  }
+
+  openDialog2(customer?:Customer): void {
+    const config ={
+      data:{
+        message: customer ? 'Editar cliente' : 'Agregar cliente',
+        content: customer,
+        view: 'editcustomer'
       }
     };
 

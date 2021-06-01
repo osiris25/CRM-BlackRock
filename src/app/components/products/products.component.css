@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 70px;
 }
 
 .products-card{
@@ -12,7 +13,7 @@
   border-radius: 2px;
   border: #FFCE00;
   margin: 3%;
-  display:inline-block;
+  display: inline block;
   /*text-align: center;*/
   /*align-items: center;*/
   transition: all .25s linear;
@@ -33,7 +34,7 @@
 .products-img{
   width:30%;
   height: 100%;
-  margin: 25px -90px 15px 15px;
+  margin: 60px -90px 15px 15px;
 }
 
 .thicker{
@@ -49,24 +50,53 @@
   margin-left: 10%;
 }
 
+.products-card-flex{
+  padding: 10px;
+}
+
 .text-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
   width: 100%;
   margin-top:10px;
 }
 
-.row-info{
-  display: flex;
-  flex-flow: row;
+.badge-assets{
+  display: inline-flex;
+  flex-direction:row;
+  width: 30%;
   justify-content: space-evenly;
-  width: 100%;
-  margin-top: 10px;
+}
 
-<<<<<<< Updated upstream
-=======
+.row-info{
+  display: inline-flex;
+  flex-flow: row;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.price-info{
+  height: 150px;
+  margin-top: 17px;
+  margin-left: -20px;
+  width: 250px;
+}
+
+.keyfactor{
+  height: 150px;
+  margin-top: 0px;
+  width: 270px;
+}
+
+.average{
+  height: 150px;
+  margin-top: 10px;
+  width: 250px;
+}
+
 @media (max-width: 768px){
   .products-container{
   display: flex;
@@ -89,14 +119,85 @@ padding:10px;
   align-items: center;
 }
 
-.text-info-card{
-
-  margin-left: -10px;
->>>>>>> Stashed changes
+@media (max-width: 768px){
+  .products-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
-.products-info{
+
+.products-card{
+width: 50%;
+padding:10px;
+}
+
+.products-card-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top:10px;
+  margin-left: -20px;
+}
+
+.badge-assets{
+  width: 60%;
+}
+
+.products-img{
+  width:20%;
+  height:90%;
+  margin: 5px 10px 10px 10px;
+}
+
+.thicker{
+  width: 100%;
+  height: 10%;
+}
+
+.row-info{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  height: 300px;
   margin-top: 0px;
-  width: 15%
+  margin-left: 30px;
+}
+
+.price-info{
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 200px;
+}
+
+.keyfactor{
+  margin-top: -50px;
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+.average{
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 20px;
+  width: 250px;
+}
+
 }
 
 

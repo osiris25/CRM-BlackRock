@@ -1,7 +1,9 @@
 export default class Product{
+  id?: string;
   closingPrice?: number;
   dateClosingPrice?: string;
   dateTheoreticalPrice?: string;
+  img?: string;
   keyFactor?:{
     badge?: string;
     assets?: number;

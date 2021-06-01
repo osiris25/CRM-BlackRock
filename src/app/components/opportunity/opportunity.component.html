@@ -1,3 +1,16 @@
+<div class="container-btn-new">
+	<button mat-stroket-button (click)="onNewOpportunity()">
+	  <mat-icon class="mat-18"  >add_circle</mat-icon>
+	  <span>Agregar</span>
+	</button>
+
+	<button mat-stroket-button (click)="onEditOpportunity('hola')" >
+		<mat-icon class="mat-18">add_circle</mat-icon>
+		<span>Editar</span>
+	  </button>
+  </div>
+
+
 <p *ngFor=" let customer of CustomersData;">customer</p>
 <table>
 	<caption>Clientes</caption>
