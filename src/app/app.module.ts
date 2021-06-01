@@ -26,7 +26,6 @@ import { MenuComponent } from './shared/menu/menu.component';
     ProductsComponent,
     HomeComponent,
     ModalComponent,
-    CreateCustomerComponent,
     PromotersComponent,
     MenuComponent,
   ],
@@ -43,7 +42,6 @@ import { MenuComponent } from './shared/menu/menu.component';
     CreateCustomerModule,
     CustomersModule,
     OpportunityModule,
-    ReactiveFormsModule
   ],
   entryComponents: [ModalComponent],
   providers: [],
