@@ -32,3 +32,15 @@
 	width: 100px;
 	height: 100px;
 }
+.conten-charts{
+	display: flex;
+	justify-content: space-around;
+}
+.line-chart h3{
+	text-align: center;
+	font-weight: bolder;
+}
+.pie-chart h3{
+	text-align: center;
+	font-weight: bolder;
+}

@@ -3,46 +3,39 @@ import { IBarChart } from "./chats.interface";
 export const DATA_BAR:IBarChart[]=[
 
   {
-    "name": "Germany",
-    "value": 40632,
-    "extra": {
-      "code": "de"
-    }
+    "name": "Juan Sánchez ",
+    "value": 4066,
+
   },
   {
-    "name": "United States",
-    "value": 50000,
-    "extra": {
-      "code": "us"
-    }
+    "name": "Karla Herrera",
+    "value": 5000,
+
   },
   {
-    "name": "France",
-    "value": 36745,
-    "extra": {
-      "code": "fr"
-    }
+    "name": "Gustavo Flores",
+    "value": 3687,
+
   },
   {
-    "name": "United Kingdom",
-    "value": 36240,
-    "extra": {
-      "code": "uk"
-    }
+    "name": "Samanta Carrillo",
+    "value": 3624,
+
+  }
+
+]
+
+export const DATA_PIE:IBarChart[]=[
+
+  {
+    "name": "Pendientes ",
+    "value": 4066,
+
   },
   {
-    "name": "Spain",
-    "value": 33000,
-    "extra": {
-      "code": "es"
-    }
-  },
-  {
-    "name": "Italy",
-    "value": 35800,
-    "extra": {
-      "code": "it"
-    }
+    "name": "Cerradas",
+    "value": 5000,
+
   }
 
 ]

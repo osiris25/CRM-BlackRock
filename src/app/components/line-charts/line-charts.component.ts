@@ -10,20 +10,20 @@ import { DATA_BAR } from './data-chart';
 export class LineChartsComponent implements OnInit {
 	data:IBarChart[] =[];
 
-  view:[number,number] = [600, 400];
+  view:[number,number] = [400, 300];
 
   // options
   showXAxis = true;
   showYAxis = true;
-  gradient = false;
-  showLegend = true;
+  gradient = true;
+  showLegend = false;
   showXAxisLabel = true;
-  xAxisLabel = 'Country';
+  xAxisLabel = 'PROMOTOR';
   showYAxisLabel = true;
-  yAxisLabel = 'Population';
+  yAxisLabel = 'NÚMERO DE TÍTULOS VENDIDOS';
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#FE4021', '#FFCE00', '#FC9BB3', '#000000']
   };
   constructor() { }
 

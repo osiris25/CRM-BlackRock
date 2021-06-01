@@ -20,6 +20,7 @@ import { OpportunityModule } from './components/opportunity/opportunity.module';
 import { MenuComponent } from './shared/menu/menu.component';
 import { LineChartsComponent } from './components/line-charts/line-charts.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { PieChartComponent } from './components/lineCharts/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     PromotersComponent,
     MenuComponent,
     LineChartsComponent,
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,
