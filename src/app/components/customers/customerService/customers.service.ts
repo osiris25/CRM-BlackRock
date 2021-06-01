@@ -31,4 +31,7 @@ export class CustomersService {
   delete(id: string): Promise<void> {
     return this.customerRef.doc(id).delete();
   }
+  updateCustomer(customer: Customer) {
+    return this.customerRef.doc(customer.id).update(customer);
+  }
 }

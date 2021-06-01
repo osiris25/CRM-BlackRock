@@ -21,14 +21,12 @@ import { ModalComponent } from '../components/modal/modal.component';
 export class TableCustumersComponent implements OnInit, AfterViewInit {
   dataSource = new MatTableDataSource<Customer>();
   customerData?: Customer[] | undefined;
-  // currentCustomer?: Customer;
-  // currentIndex = "";
-  
+
   ngOnInit(): void {
     this.getCustomers();
   }
 
-  displayedColumns: string[] = ['name', 'email', 'phone', 'company', 'priority', 'actions', ];
+  displayedColumns: string[] = ['name', 'email', 'phone', 'company', 'priority', 'customerType', 'actions', ];
   @ViewChild(MatPaginator, { static: true })
   paginator!: MatPaginator;
   @ViewChild (MatSort, {static: true})sort!: MatSort;
@@ -47,15 +45,16 @@ export class TableCustumersComponent implements OnInit, AfterViewInit {
       this.dataSource.data = data;
     });
   }
-  
+
 ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-  } 
+  }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
   onDeletePost(customer:any){
     console.log('Delete customer', customer)
     Swal.fire({
@@ -68,10 +67,14 @@ ngAfterViewInit() {
       confirmButtonText: 'Sí, eliminar'
     }).then( result =>{
       if(result.value){
+        this.CustomersService.delete(customer.id)
+          .then(() => {})
+          .catch((err) => console.log(err));
         Swal.fire('Deleted!', 'El cliente ha sido eliminado', 'success');
       }
     })
   }
+
   onEditPost(customer:any){
     console.log('Edit');
     this.openDialog(customer);
@@ -90,8 +93,7 @@ ngAfterViewInit() {
     const dialogRef = this.dialog.open(ModalComponent, config);
     dialogRef.afterClosed().subscribe(result => {
       console.log('Open');
-      
+
     })
   }
 }
-
