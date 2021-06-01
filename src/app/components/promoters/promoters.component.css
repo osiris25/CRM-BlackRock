@@ -7,13 +7,15 @@
 .card-box{
   display: flex;
   flex-flow: row wrap;
+  margin-top: 75px;
+  margin-left: 300px;
 }
 
 .promoter-card{
   display:block;
   background: #FFFFFF;
-  width: 20%;
-  max-height: 30%;
+  width: 25%;
+  min-height: 30%;
   border-radius: 2px;
   margin: 3%;
   display:inline-block;
@@ -70,4 +72,26 @@
 
 .ishare{
   margin-left: 5%;
+}
+
+
+@media (max-width: 768px) {
+
+.card-box{
+  margin-left: 300px;
+}
+
+.promoter-card{
+  width: 65%;
+}
+}
+
+@media (max-width: 360px) {
+.card-box{
+  margin-left: 80px;
+}
+
+.promoter-card{
+  width: 85%;
+  }
 }
