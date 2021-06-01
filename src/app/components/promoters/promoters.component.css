@@ -7,14 +7,16 @@
 .card-box{
   display: flex;
   flex-flow: row wrap;
-  margin-top: 75px;
-  margin-left: 300px;
+	justify-content: space-around;
+  margin-top: 2%;
+  margin-left: 5%;
+	margin-right: 5%;
 }
 
 .promoter-card{
   display:block;
   background: #FFFFFF;
-  width: 25%;
+  width: 26%;
   min-height: 30%;
   border-radius: 2px;
   margin: 3%;
@@ -72,6 +74,23 @@
 
 .ishare{
   margin-left: 5%;
+}
+.our-customers{
+	display: flex;
+	margin-top: 10%;
+	margin-left: 5% ;
+}
+.our-customers-title{
+position: relative;
+padding-top:2%;
+
+}
+.our-customers-title p{
+font-size: 2em;
+font-weight: bolder;
+}
+.filter{
+	display: none;
 }
 
 

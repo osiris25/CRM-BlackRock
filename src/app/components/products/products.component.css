@@ -9,7 +9,7 @@
   display:block;
   background: #FFFFFF;
   width: 70%;
-  max-height: 30%;
+  max-height: 220px;
   border-radius: 2px;
   border: #FFCE00;
   margin: 3%;
@@ -17,13 +17,13 @@
   /*text-align: center;*/
   /*align-items: center;*/
   transition: all .25s linear;
-  border-color: #FFFFFF;
+  border-color: #F94613;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
 }
-
 .products-card:hover{
   box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
-  background: #EFEFEF;
+  border-style: solid;
+  background: #FFFFFF;
 }
 .products-card-flex{
   display: flex;
@@ -33,13 +33,13 @@
 
 .products-img{
   width:30%;
-  height: 100%;
-  margin: 60px -90px 15px 15px;
+  height: 90%;
+  margin: 10px -90px 20px 15px;
 }
 
 .thicker{
-  width: 90%;
-  height: 90%;
+  width: 90px;
+  height: 90px;
 }
 
 .text-info-card{
@@ -74,6 +74,7 @@
 .row-info{
   display: inline-flex;
   flex-flow: row;
+	margin-right: 190px;
   width: 100%;
   margin-top: 5px;
 }
@@ -199,5 +200,4 @@ padding:10px;
 }
 
 }
-
-
+}
