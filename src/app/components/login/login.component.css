@@ -61,7 +61,7 @@ h1 {
   font-size: 25px;
   margin: 130px;
   margin-bottom: 80px;
-  margin-left: 60px;
+  margin-left: 67px;
   display: inline-block;
   text-align: left;
 }
@@ -153,6 +153,11 @@ h1 {
   font-size: 20px;
 }
 
+.btnL:hover{
+  background: #000000;
+  color: #FFFFFF;
+}
+
 .email-container input:focus ~ label,
 .email-container input:valid ~ label{
 	top:-12px;
@@ -189,8 +194,7 @@ h1 {
 .firstContainer{
   display: flex;
   justify-content: flex-end;
-  width:90%;
-  margin-right: 180px;
+  width:83%;
 }
 
 .firstContainer span{
@@ -220,8 +224,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  width: 80%;
+  width: 60%;
   margin-right: 190px;
+  margin-left: 5px;
 }
 
 .secondContainer{
@@ -234,11 +239,31 @@ h1 {
 .text-center{
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
-  margin: 100px;
+  margin: 90px;
   margin-bottom: 40px;
-  margin-left: 35px;
+  margin-left: 5px;
   display: inline-block;
   text-align: left;
+}
+
+.btnL{
+	color:#000000;
+	background-color:#FE4021;
+	outline: none;
+  border: 0;
+  color: #000000;
+	padding:8px 13px;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+}
+
+.btnL:hover{
+  background: #000000;
+  color: #FFFFFF;
 }
 
 }
