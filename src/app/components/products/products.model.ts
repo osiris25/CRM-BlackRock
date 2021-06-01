@@ -1,4 +1,5 @@
 export default class Product{
+  id?: string;
   closingPrice?: number;
   dateClosingPrice?: string;
   dateTheoreticalPrice?: string;

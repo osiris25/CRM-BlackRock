@@ -4,6 +4,7 @@ import { OpportunityComponent } from './opportunity.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { EditOpportunityComponent } from './edit-opportunity/edit-opportunity.component';
 import { CreateOpportunityComponent } from './create-opportunity/create-opportunity.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,8 @@ import { CreateOpportunityComponent } from './create-opportunity/create-opportun
   imports: [
     CommonModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   exports:[
     EditOpportunityComponent,
