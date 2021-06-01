@@ -11,7 +11,6 @@ import Swal from 'sweetalert2';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../components/modal/modal.component';
 
-
 @Component({
   selector: 'app-table-custumers',
   templateUrl: './table-custumers.component.html',
@@ -86,7 +85,8 @@ ngAfterViewInit() {
     const config ={
       data:{
         message: customer ? 'Editar cliente' : 'Agregar cliente',
-        content: customer
+        content: customer,
+        view: 'customer'
       }
     };
 
