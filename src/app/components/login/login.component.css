@@ -8,16 +8,18 @@
   background-origin: content-box;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 
 .firstContainer{
-  width: 50%;
+  width: 40%;
   height: 100%;
 }
 
 .firstContainer span{
-margin: 50px 0 0 15px;
+margin: 60px 0 0 25px;
 display:inline-block;
 text-align: center;
 }
@@ -39,7 +41,7 @@ h1 {
 .welcome{
   font-family: 'Noto Sans', sans-serif;
   width: 90%;
-  margin: 50px;
+  margin: 100px;
   margin-bottom: 10px;
   margin-left: 60px;
   display: inline-block;
@@ -59,7 +61,7 @@ h1 {
   font-size: 25px;
   margin: 130px;
   margin-bottom: 80px;
-  margin-left: 60px;
+  margin-left: 67px;
   display: inline-block;
   text-align: left;
 }
@@ -69,7 +71,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 80%;
+  width: 70%;
   margin-top: 0;
   margin-left: 10%;
   margin-right: 10%;
@@ -151,6 +153,11 @@ h1 {
   font-size: 20px;
 }
 
+.btnL:hover{
+  background: #000000;
+  color: #FFFFFF;
+}
+
 .email-container input:focus ~ label,
 .email-container input:valid ~ label{
 	top:-12px;
@@ -167,54 +174,99 @@ h1 {
   display:none;
 }
 
-/*.inputForm{
+@media (max-width: 768px){
+.loginContainer{
+    background-image: url('../../../assets/img/skateboard.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 45px;
+}
+.firstContainer{
+  display: flex;
+  justify-content: flex-end;
+  width:83%;
+}
+
+.firstContainer span{
+  margin: 40px;
+}
+
+.welcome{
+  font-family: 'Noto Sans', sans-serif;
+  width: 90%;
+  margin: 120px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  text-align: left;
+}
+
+.welcome h2{
+  font-size: 22px;
+}
+
+.wlcm{
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.loginForm{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-family: 'Noto Sans', sans-serif;
-  width: 90%;
-  border: 0;
-  border-bottom: 2px #979797;
-  outline: 0;
-  padding: 10px 0;
-  background: transparent;
-  transition: border-color 0.2s;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  text-align: left;
+  width: 60%;
+  margin-right: 190px;
+  margin-left: 5px;
 }
 
-.emailInput, .passInput{
-  outline: 0;
-  border-width: 0 0 2px;
-  border-color: #979797;
-  width:70%;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 14px;
-  color: transparent;
+.secondContainer{
+  width:50%;
+  height:auto;
+ /* background-color: #FFFFFF;
+  opacity: 0.6;*/
 }
 
-.form__label{
-    position: absolute;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: #000000;
-  }
-
-.btnLogin{
-  margin: 55px;
+.text-center{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  margin: 90px;
+  margin-bottom: 40px;
+  margin-left: 5px;
+  display: inline-block;
+  text-align: left;
 }
 
 .btnL{
-  background-color: #FE4021;
-  position: absolute;
-  width: 182px;
-  height: 50px;
+	color:#000000;
+	background-color:#FE4021;
+	outline: none;
+  border: 0;
+  color: #000000;
+	padding:8px 13px;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
-  border-color: #FE4021;
-}*/
+  font-size: 16px;
+}
+
+.btnL:hover{
+  background: #000000;
+  color: #FFFFFF;
+}
+
+}
 
 
 
