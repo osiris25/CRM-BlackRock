@@ -1,47 +1,40 @@
-<div *ngFor="let product of productData">
-    <div class="container">
-      <h1>{{product.name}}</h1> 
-      <div>
-        <h5 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
-          <p *ngIf="item.key=='badge'">{{item.value}}</p>
-        </h5>
-        <h5 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
-          <p *ngIf="item.key=='assets'">{{item.value}}</p>
-        </h5>
+
+  <div class="products-container">
+    <div class="products-card" *ngFor="let product of productData">
+      <div class="products-card-flex">
+        <div class="products-img">
+          <img class="thicker" src="assets/img/ishare_agg.png"/>
+        </div>
+        <div class="text-info-card">
+              <div class="text-container">
+                <h1>{{product.name}}</h1>
+              <div>
+              <div class="row-info">
+                <div class="price-info">
+                    <h4>NAV a {{product.dateTheoreticalPrice}}</h4>
+                    <h3><b>Precio de cierre: {{product.theoreticalPrice}}</b></h3>
+                </div>
+                <div class="products-info">
+                  <h3 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                    <p *ngIf="item.key=='badge'">Divisa: {{item.value}}</p>
+                  </h3>
+                  <h4 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                    <p *ngIf="item.key=='assets'"> Activos netos: {{item.value}}</p>
+                  </h4>
+                </div>
+                <div class="keyfactor">
+                    <h4 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                    <p *ngIf="item.key=='commissions'">Comisiones: {{item.value}}%</p>
+                    </h4>
+                    <h4 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                    <p *ngIf="item.key=='duration'">Duración efectiva: {{item.value}}%</p>
+                    </h4>
+                    <h4 *ngFor = "let item of product.performance | keyvalue; let i=index;">
+                    <p *ngIf="item.key=='annualPercentage'">Porcentaje anual: {{item.value}}%</p>
+                    </h4>
+                </div>
+              </div>
+            </div>
       </div>
-      <div>
-        <h3><b>Objetivo:</b></h3><p>{{product.objective}}</p>
-      </div>
-      <div class="container-descriptions">
-        <div>
-          <h5>NAV a {{product.dateTheoreticalPrice}}</h5>
-          <h3><b>{{product.theoreticalPrice}}</b></h3>
-        </div>
-        <div>
-          <h2 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
-            <p *ngIf="item.key=='commissions'">Comisiones: {{item.value}}%</p>
-          </h2>
-          <h2 *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
-            <p *ngIf="item.key=='duration'">Duración efectiva: {{item.value}}%</p>
-          </h2>
-        </div>
-        <div>
-          <h2 *ngFor = "let item of product.performance | keyvalue; let i=index;">
-            <p *ngIf="item.key=='annualPercentage'">Porcentaje anual: {{item.value}}%</p>
-          </h2>
-        </div>
-        <div>
-          <h2>Porcentajes</h2>
-          <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
-            <span *ngIf="item.key=='year'">A un año: {{item.value}}%</span>
-          </p>
-          <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
-            <span *ngIf="item.key=='atThree'">A tres años: {{item.value}}%</span>
-          </p>
-          <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
-            <span *ngIf="item.key=='atFive'">A cinco años: {{item.value}}%</span>
-          </p>
-        </div>
-      </div>
-      <p>______________________</p>
     </div>
+  </div>
