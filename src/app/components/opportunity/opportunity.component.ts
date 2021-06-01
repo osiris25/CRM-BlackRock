@@ -8,6 +8,8 @@ import { ProductsService } from '../products/productsServices/products.service';
 import { PromotersService } from '../promoters/promoterService/promoters.service';
 import Product from '../products/products.model';
 import Promoter from '../promoters/promoters.model';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
 @Component({
   selector: 'app-opportunity',
@@ -15,6 +17,7 @@ import Promoter from '../promoters/promoters.model';
   styleUrls: ['./opportunity.component.css']
 })
 export class OpportunityComponent implements OnInit {
+
 	opportunityData?: Opportunity[]= [];
 	CustomersData?: Customer[]=[];
 	PromotersData?: Promoter[]=[];
@@ -27,7 +30,8 @@ export class OpportunityComponent implements OnInit {
 		private CustomerService: CustomersService,
 		private PromoterService: PromotersService,
 		private ProductService: ProductsService,
-			) { }
+    public dialog: MatDialog,
+	) { }
 
   ngOnInit(): void {
 		this.filterCustomers();
@@ -82,11 +86,50 @@ export class OpportunityComponent implements OnInit {
 
     });
   }
+  // newTutorial(): void {
+  //   this.submitted = false;
+  //   this.opportunity = new Opportunity();
+  // }
 
 
-  newTutorial(): void {
-    this.submitted = false;
-    this.opportunity = new Opportunity();
+  onNewOpportunity() {
+    this.openDialog();
+  }
+
+  openDialog(Opportunity?:Opportunity): void {
+    const config ={
+      data:{
+        message: Opportunity ? 'Editar oportunidad' : 'Agregar oportunidad',
+        OpportunityForm: Opportunity,
+        view: 'opportunity'
+      }
+    };
+
+    const dialogRef = this.dialog.open(ModalComponent, config);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Open');
+
+    })
+  }
+
+  onEditOpportunity(customer:any){
+    console.log('Edit');
+    this.openDialog2(customer);
+  }
+  openDialog2(Opportunity?:Opportunity): void {
+    const config ={
+      data:{
+        message: Opportunity ? 'Editar oportunidad' : 'Agregar oportunidad',
+        OpportunityForm: Opportunity,
+        view: 'editOpportunity'
+      }
+    };
+
+    const dialogRef = this.dialog.open(ModalComponent, config);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Open');
+
+    })
   }
 
 
