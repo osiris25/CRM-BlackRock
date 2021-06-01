@@ -18,6 +18,8 @@ import { PromotersComponent } from './components/promoters/promoters.component';
 import { CustomersModule } from './components/customers/customers.module';
 import { OpportunityModule } from './components/opportunity/opportunity.module';
 import { MenuComponent } from './shared/menu/menu.component';
+import { LineChartsComponent } from './components/line-charts/line-charts.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     ModalComponent,
     PromotersComponent,
     MenuComponent,
+    LineChartsComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     CreateCustomerModule,
     CustomersModule,
     OpportunityModule,
+		NgxChartsModule
   ],
   entryComponents: [ModalComponent],
   providers: [],
