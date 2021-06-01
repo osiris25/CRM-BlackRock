@@ -1,3 +1,18 @@
 .hiddenId{
     display: none;
 }
+.new-customer-container {
+    display: flex;
+    flex-direction: column;
+}
+.new-customer-container form {
+    margin-bottom: 20px;
+}
+mat-form-field {
+    width: 100%;    
+}
+.mat-flat-button{
+    width: 100%;
+    background-color: #FE4021;
+    color: #fff;
+}
