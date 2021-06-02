@@ -6,44 +6,76 @@
     margin-top: 60px;
     margin-bottom: 90px;
     width: 500px;
-    height: 100px;
+    height: 70px;
     margin-left: 27%;
   }
+
   .title-container {
     margin-right: 50px;
   }
+
   .title-container h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 35px;
     font-weight: 800;
   }
+
   .container-information{
     margin-left: 40px;
+    margin-bottom: 60px;
+
     width: 90%;
     height: 70%;
+
+    padding-top: 40px;
+    
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+    0 2px 4px rgba(0,0,0,0.07), 
+    0 4px 8px rgba(0,0,0,0.07), 
+    0 8px 16px rgba(0,0,0,0.07),
+    0 16px 32px rgba(0,0,0,0.07), 
+    0 32px 64px rgba(0,0,0,0.07);
+
+    background: #EFEFEF;
   }
+
+   /* .button-line {
+    margin-left: -15px;
+    margin-bottom: 60px;
+
+    width: 100%;
+    height: 20px;
+
+    background: #F94613;
+  } */
+
   .reporter-sheet{
     width: 100%;
     height: 550px;
-    border: #F94613 5px;
-    border-style: solid;
+
     margin-left: 15px;
     margin-right: 15px;
   }
+
   .pdf-img{
     width: 20px;
     height: 30px;
     margin-top: 70px;
     cursor: pointer;
   }
+
   .blk-title h2{
-    margin-top: 30px;
+    margin-top: 45px;
     margin-bottom: 40px;
+    
     margin-left: 10%;
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
+
+    color: #F94613;
   }
+
   .blk-title p{
     margin-top: -38px;
     margin-bottom: 40px;
@@ -51,20 +83,55 @@
     font-family: 'Roboto', sans-serif;
     font-size: 15.5px;
     font-weight: 400;
+
+    color: #616161;
   }
+
   .customer-info{
-    margin-left: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    
+    margin-left: 9%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    width: 80%;
+
+    font-family: 'Roboto', sans-serif;
   }
-  .img-heart{
-    opacity: 18%;
-    margin-top: -22.5%;
-    margin-left: 20%;
-    background-image: url('../../../assets/img/manos.png') no-repeat;
+
+  hr {
+    height: 2px;
+    width: 85%;
+
+    background-color: #F94613;
+
+    margin-top: 30px;
   }
+
   .customer-info-two{
-    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-left: 9%;
+    margin-top: 50px;
+
+    font-family: 'Roboto', sans-serif;
+
+    width: 380px;
+    height: 180px;
   }
-  .amount{
-    margin-left: 10%;
-    margin-top: 80px;
+
+  .amount-top{
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+      margin-left: 77%;
   }
+
+ 
+
+  

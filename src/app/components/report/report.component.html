@@ -1,29 +1,3 @@
-<!-- <div class="container">
-	<div class="row">
-		<div id="htmlData">
-			<h2>Lista de videojuegos en stock</h2>
-			<table class="table table-bordered mt-4">
-				<tr class="table-primary">
-					<th>Id</th>
-					<th>Name</th>
-					<th>Platform</th>
-					<th>Reference</th>
-				</tr>
-				<tr *ngFor="let game of VIDEOGAMES">
-					<th>{{game.id}}</th>
-					<td>{{game.name}}</td>
-					<td>{{game.platform}}</td>
-					<td>{{game.reference}}</td>
-				</tr>
-			</table>
-		</div>
-	</div>
-</div>
-
-
-<div>
-	<button class="btn col col-lg-4 btn-danger btn-block ml-4" (click)="generarPDF()">Download PDF</button>
-</div> -->
 <div id="print-container">
 	<div class="reporter-main-container">
 		<div class="title-container">
@@ -35,24 +9,27 @@
 	</div>
 	<div class="container-information">
 		<div class="reporter-sheet">
-			<div class="blk-title">
-				<h2><b>BlackRock</b></h2>
-				<p>Cierre de compra</p>
+			<div class="container-blk-title">
+				<div class="blk-title">
+					<h2><b>BlackRock</b></h2>
+					<p>Cierre de compra</p>
+				</div>
 			</div>
 			<div class="customer-info">
-				<p><b>Fecha:</b> Junio 2, 2021</p>
-				<p><b>Cliente:</b> Wendy Rivas</p>
-				<p><b>Contacto:</b> 55 33 44 88 99</p>
+				<div class="customer-info-right"><p><b>Fecha:</b> Junio 2, 2021</p></div>
+				<div class="customer-info-center"><p><b>Cliente:</b> Wendy Rivas</p></div>
+				<div class="customer-info-left"><p><b>Contacto:</b> 55 33 44 88 99</p></div>
 			</div>
-			<!-- <img class="img-heart" src='assets/img/manos_corazon.png'> -->
+			<hr class="line-reporte-oportunidad">
 			<div class="customer-info-two">
-				<p><b>Atendió:</b> Carlos Habana</p>
-				<p><b>Status de compra:</b> Cerrada</p>
-				<p><b>Producto:</b> iShares MSCI China ETF</p>
+				<div class="customer-info-two-right"><p><b>Atendió:</b> Carlos Habana</p></div>
+				<div class="customer-info-two-center"><p><b>Status de compra:</b> Cerrada</p></div>
+				<div class="customer-info-two-left"><p><b>Producto:</b> iShares MSCI China ETF</p></div>
 			</div>
 			<div class="amount">
-				<p><b>Monto:</b> 2,858.8 USD</p>
+				<div class="amount-top"><p><b>Monto:</b> 2,858.8 USD</p></div>	
 			</div>
 		</div>
+	  <!-- <div><hr class="button-line"></div> -->
 	</div>
 </div>
