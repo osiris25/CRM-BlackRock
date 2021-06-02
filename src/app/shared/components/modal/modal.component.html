@@ -10,7 +10,7 @@
     <app-create-opportunity></app-create-opportunity>
   </div>
   <div *ngIf="data.view=='editOpportunity';">
-    <app-edit-opportunity></app-edit-opportunity>
+    <app-edit-opportunity [OpportunityInput]="data.content"></app-edit-opportunity>
   </div>
   <ng-template #showNewForm>
     <app-create-customer></app-create-customer>

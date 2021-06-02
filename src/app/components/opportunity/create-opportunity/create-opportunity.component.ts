@@ -73,8 +73,6 @@ export class CreateOpportunityComponent implements OnInit {
       )
     ).subscribe(data => {
       this.CustomersData = data;
-		console.log(this.CustomersData);
-
     });
   }
 
@@ -87,8 +85,6 @@ export class CreateOpportunityComponent implements OnInit {
       )
     ).subscribe(data => {
       this.PromotersData = data;
-		console.log("promotores",this.PromotersData);
-
     });
   }
 
@@ -101,14 +97,10 @@ export class CreateOpportunityComponent implements OnInit {
       )
     ).subscribe(data => {
       this.ProductsData = data;
-		console.log("producto",this.ProductsData);
-
     });
   }
 
   capturar(e:MatSelectChange ) {
-    // Pasamos el valor seleccionado a la variable verSeleccion
-    console.log(this.opcionSeleccionado);
     this.verSeleccion = this.ProductsData?.filter(element=>{
       return element.id==this.opcionSeleccionado
     })[0].keyFactor?.badge;

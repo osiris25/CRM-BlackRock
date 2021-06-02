@@ -1,16 +1,40 @@
 <div class="container-btn-new">
-	<button mat-stroket-button (click)="onNewOpportunity()">
-	  <mat-icon class="mat-18"  >add_circle</mat-icon>
-	  <span>Agregar</span>
-	</button>
+  <button mat-stroket-button (click)="onNewOpportunity()">
+    <mat-icon class="mat-18">add_circle</mat-icon>
+    <span>Agregar</span>
+  </button>
 
-	<button mat-stroket-button (click)="onEditOpportunity('hola')" >
-		<mat-icon class="mat-18">add_circle</mat-icon>
-		<span>Editar</span>
-	  </button>
-  </div>
+  <button mat-stroket-button (click)="onEditOpportunity('hola')">
+    <mat-icon class="mat-18">add_circle</mat-icon>
+    <span>Editar</span>
+  </button>
+</div>
 
+<div *ngFor="let opportunity of OpportunityData">
+  <label>id oportunidad</label>
+  <h1>{{ opportunity.id }}</h1>
+  <label *ngFor="let customer of CustomersData">
+    <h1 *ngIf="customer.id === opportunity.id_customer">
+      Cliente: {{ customer.name }}
+    </h1>
+  </label>
+  <label *ngFor="let product of ProductsData">
+    <h1 *ngIf="product.id === opportunity.id_product">
+      Producto: {{ product.name }}
+    </h1>
+  </label>
+  <label *ngFor="let promoter of PromotersData">
+    <h1 *ngIf="promoter.id === opportunity.id_promoter">
+      Creada por: {{ promoter.name }}
+    </h1>
+  </label>
+  <label>precio</label>
+  <h1>{{ opportunity.price }}</h1>
+  <label>Status</label>
+  <h1>{{ opportunity.status }}</h1>
+</div>
 
+<!-- 
 <p *ngFor=" let customer of CustomersData;">customer</p>
 <table>
 	<caption>Clientes</caption>
@@ -27,4 +51,4 @@
 		</tr>
 
 	</tbody>
-</table> 
+</table>  -->
