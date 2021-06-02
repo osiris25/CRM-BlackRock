@@ -22,6 +22,7 @@ import { LineChartsComponent } from './components/line-charts/line-charts.compon
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { PieChartComponent } from './components/lineCharts/pie-chart/pie-chart.component';
 import { ReportComponent } from './components/report/report.component';
+import { OpportunityDetailComponent } from './opportunity/opportunity-detail/opportunity-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ReportComponent } from './components/report/report.component';
     LineChartsComponent,
     PieChartComponent,
     ReportComponent,
+    OpportunityDetailComponent,
   ],
   imports: [
     BrowserModule,

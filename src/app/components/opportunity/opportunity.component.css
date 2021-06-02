@@ -30,8 +30,8 @@
     grid-gap: 15px;
     box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 40%);
     transition: all .25s linear;
-    
-    
+
+
   }
   .status {
     background-color: #FE4021;
@@ -46,7 +46,7 @@
   .opportunityCard:hover {
     box-shadow: -1px 10px 10px 0px rgba(0,0,0,0.6);
     border: 3px solid #FFCE00;
-  }  
+  }
   .priority {
     background-color: #FFCE00;
     color: #000;
@@ -72,7 +72,7 @@
   .sectionName img {
     width: 150px;
     height: auto;
-   
+
   }
   .titleSection {
     display: block;
