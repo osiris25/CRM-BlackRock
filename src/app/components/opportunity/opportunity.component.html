@@ -43,7 +43,7 @@
         <b>Fecha de creación: </b> <span>01/06/21</span>
       </p>
       <button mat-button (click)="onEditOpportunity('dataAlform')" class="buttonCard"><mat-icon class="mat-18">edit</mat-icon>Editar</button>
-      <button mat-button (click)="openOpportunity('dataaVista')" class="buttonCard"><mat-icon class="mat-18">visibility</mat-icon>Ver detalles</button>
+      <button mat-button [routerLink]="['/detailopportunity',opportunity.id]" class="buttonCard"><mat-icon class="mat-18">visibility</mat-icon>Ver detalles</button>
     </div>
     <!-- <label>id oportunidad</label>
     <h1>{{ opportunity.id }}</h1>

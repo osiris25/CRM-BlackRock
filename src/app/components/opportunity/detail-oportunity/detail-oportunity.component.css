@@ -1,0 +1,47 @@
+.containerDetail{
+    width: 90%;
+    padding: 15% 5%;
+    min-height: 100vh;
+  }
+.dataCustomer-Product {
+    
+}
+.dataCustomer-Product p {
+    width: 50%;
+    float: left;
+}
+.storieTable {
+    width: 100%;
+    margin-top: 30px;
+    text-align: left;
+}
+.storieTable th {
+    border-bottom: 1px solid rgb(177, 176, 176);
+}
+.storieTable td {
+    border-bottom: 1px solid rgb(177, 176, 176);
+}
+.buttonCard {
+    margin-right: 10px;
+    color: #fff;
+    background-color: orange;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    float: left;
+    padding: 5px 8px;
+  }
+  .coments textarea {
+      width: 100%;
+  }
+  .record {
+      width: 100%;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .title {
+      font-weight: bold;
+  }
