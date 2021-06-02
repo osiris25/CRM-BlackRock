@@ -37,7 +37,6 @@ export class CreateOpportunityComponent implements OnInit {
     ) { }
 
   public newOpportunityForm = new FormGroup ({
-    id: new FormControl('', Validators.required),
     id_customer: new FormControl(''),
     id_product: new FormControl(''),
     id_promoter: new FormControl('', Validators.required),

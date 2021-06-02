@@ -9,8 +9,7 @@
     <span>Editar</span>
   </button>
 </div>
-
-<div *ngFor="let opportunity of OpportunityData">
+<div *ngFor="let opportunity of OpportunityData" [routerLink]="['/detailopportunity',opportunity.id]">
   <label>id oportunidad</label>
   <h1>{{ opportunity.id }}</h1>
   <label *ngFor="let customer of CustomersData">

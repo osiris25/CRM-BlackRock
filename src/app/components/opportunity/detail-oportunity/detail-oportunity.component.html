@@ -1,0 +1,76 @@
+<div *ngFor="let opportunity of OpportunityData">
+    <label *ngFor="let customer of CustomersData">
+        <h2 *ngIf="customer.id === opportunity.id_customer">Cliente: {{customer.name}}</h2>
+    </label>
+    <label *ngFor="let product of ProductsData">
+        <h2 *ngIf="product.id === opportunity.id_product">Producto: {{product.name}}</h2>
+    </label>
+    <label *ngFor="let promotor of PromotersData">
+        <h2 *ngIf="promotor.id === opportunity.id_promoter">Nombre Promotor: {{promotor.name}}</h2>
+        <h2 *ngIf="promotor.id === opportunity.id_promoter">Status: {{promotor.phone}}</h2>
+    </label>
+</div>
+<div *ngFor="let opportunity of OpportunityData">
+    <h2>Precio: {{opportunity.price}}</h2>
+    <h2>Status: {{opportunity.status}}</h2>
+</div>
+<div *ngFor="let element of elementData">
+    <h2>{{element.etapa}}</h2>
+    <h2>{{element.prioridad}}</h2>
+    <h2>{{element.proxima_actividad}}</h2>
+    <h2>{{element.ultimo_contacto}}</h2>
+</div>
+
+
+<!-- 
+<div class=“detail-main-container”>
+    <h1>Detalle de la oportunidad</h1>
+    <div class=“detail” *ngFor="let opportunity of OpportunityData">
+        <div class=“customer-detail” *ngFor="let customer of CustomersData">
+          <div class=“customer-name” *ngIf="customer.id === opportunity.id_customer"><b>Cliente:</b>{{customer.name}}</div>
+        </div>
+        <div class=“customer-detail” *ngFor="let product of ProductsData">
+            <div class=“product” *ngIf="product.id === opportunity.id_product"><b>Producto:</b>{{product.name}}</div>
+          </div>
+        <div class=“status-info”>
+          <div class=“stage” *ngFor="let opportunity of OpportunityData">
+            <p><b>Status:</b>{{opportunity.status}}</p>
+          </div>
+          <div class=“priority” *ngFor="let element of elementData">
+            <p><b>Prioridad:</b>{{element.prioridad}}</p>
+          </div>
+          <div class=“employee” *ngFor="let promotor of PromotersData">
+            <p><b>Empleado BLK:</b>{{promotor.name}}</p>
+          </div>
+        </div>
+        <div class=“date-info” *ngFor="let element of elementData">
+          <div class=“last-date”>
+            <p><b>Última reunión: </b>{{element.ultimo_contacto}}</p>
+          </div>
+          <div class=“next-date”>
+            <p><b>Próxima reunión:</b>{{element.proxima_actividad}}</p>
+          </div>
+        </div>
+          <div class=“comments”>
+            <textarea class=“comments-area” placeholder=“Comentarios:“>
+            </textarea>
+         </div>
+    </div> -->
+    <!-- <div class=“historial” *ngFor="let opportunity of OpportunityData">
+      <h2>Historial de oportunidades</h2>
+        <div class=“info-historial”>
+          <p><b>Fecha:</b>{{}}</p>
+          <p><b>Cliente:</b>{{}}</p>
+          <p><b>Productos:</b>{{}}</p>
+        </div>
+        <div class=“status-customer”>
+          <p><b>Tipo:</b>{{}}</p>
+          <p><b>Prioridad:</b>{{}}</p>
+          <p><b>Status:</b>{{}}</p>
+        </div>
+        <div class=“employee-date”>
+          <p><b>Empleado BLK:</b>{{}}</p>
+          <p><b>Próxima reunión:</b>{{}}</p>
+        </div>
+      </div> -->
+    <!-- </div> -->
