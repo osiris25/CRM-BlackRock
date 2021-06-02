@@ -18,7 +18,7 @@ import { ModalComponent } from 'src/app/shared/components/modal/modal.component'
 })
 export class OpportunityComponent implements OnInit {
 
-	opportunityData?: Opportunity[]= [];
+	OpportunityData?: Opportunity[]= [];
 	CustomersData?: Customer[]=[];
 	PromotersData?: Promoter[]=[];
 	ProductsData?: Product[]=[];
@@ -37,6 +37,19 @@ export class OpportunityComponent implements OnInit {
 		this.filterCustomers();
 		this.filterProduct();
 		this.filterPromoters();
+    this.filterOpportunity();
+  }
+
+  filterOpportunity(): void {
+    this.OpportunityService.getAll().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(data => {
+      this.OpportunityData = data;
+    });
   }
 
   saveOpportunity(): void {
@@ -55,8 +68,6 @@ export class OpportunityComponent implements OnInit {
       )
     ).subscribe(data => {
       this.CustomersData = data;
-		console.log(this.CustomersData);
-
     });
   }
 
@@ -69,8 +80,6 @@ export class OpportunityComponent implements OnInit {
       )
     ).subscribe(data => {
       this.PromotersData = data;
-		console.log("promotores",this.PromotersData);
-
     });
   }
 	filterProduct(): void {
@@ -82,8 +91,6 @@ export class OpportunityComponent implements OnInit {
       )
     ).subscribe(data => {
       this.ProductsData = data;
-		console.log("producto",this.ProductsData);
-
     });
   }
   // newTutorial(): void {
@@ -131,6 +138,11 @@ export class OpportunityComponent implements OnInit {
 
     })
   }
-
+ onViewDetail(data: string){
+  console.log('Hola detalle')
+ }
+ openOpportunity(data: string){
+  console.log('Hola detalle')
+ }
 
 }

@@ -31,7 +31,7 @@ export class EditOpportunityComponent implements OnInit {
     this.initValuesForm();
   }
 
-  editCustomer(oportunity: Opportunity) {
+  editOpportunity(oportunity: Opportunity) {
     //  //console.log(customerId, typeof(customerId) );
     //  this.CustomersService.updateCustomer(customer)
     //    .then(() => ('The tutorial was updated successfully!'))

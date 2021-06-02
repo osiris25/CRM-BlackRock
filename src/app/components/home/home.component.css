@@ -1,18 +1,21 @@
 .card-welcome{
 	background-color: black;
-	margin:12% 5% 0 5% ;
+	margin:10% 5% 0 5% ;
 	margin-bottom: 5%;
 }
  h1{
 	padding:15px;
 	text-align: center;
 	color: #ffff;
+	font-weight: bolder;
 }
 .card-content{
 	display: flex;
 	color: #ffff;
 	justify-content: space-around;
 	text-align: center;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 
 .products-sold h3{
@@ -43,4 +46,29 @@
 .pie-chart h3{
 	text-align: center;
 	font-weight: bolder;
+}
+.line hr{
+	border: solid #FFFFFF;
+
+	}
+
+@media (max-width: 768px){
+.card-content{
+	flex-direction: column;
+}
+.line hr{
+display: none;
+
+	}
+p{
+	font-size: 1.5em;
+}
+h3{
+	font-size: 2em;
+}
+.conten-charts{
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
 }
