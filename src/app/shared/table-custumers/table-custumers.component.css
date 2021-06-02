@@ -1,8 +1,3 @@
-body{
-  background: #E5E5E5;
-  width: 100%;
-}
-
 table {
     width: 100%;
     background: white;
@@ -13,10 +8,6 @@ table {
     flex-direction: row;
     justify-content: center;
     align-items:center;
-  }
-
-  .backGround{
-    background: #E5E5E5;
   }
 
   .title h1{
@@ -31,8 +22,6 @@ table {
   }
 
   .box-button {
-    background: #E5E5E5;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -94,10 +83,6 @@ table {
     margin-left: 100px;
   }
 
-  .background-filtro {
-    background: #E5E5E5;
-  }
-
   .placeholder-filtro {
     margin-left: 100px;
   }
@@ -122,10 +107,6 @@ table {
   .name-customer-style {
     font-weight: bold;
     color: black;
-  }
-
-  .main-background {
-    background: #A5A5A5;
   }
 
   

@@ -21,6 +21,7 @@ import { MenuComponent } from './shared/menu/menu.component';
 import { LineChartsComponent } from './components/line-charts/line-charts.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { PieChartComponent } from './components/lineCharts/pie-chart/pie-chart.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PieChartComponent } from './components/lineCharts/pie-chart/pie-chart.c
     MenuComponent,
     LineChartsComponent,
     PieChartComponent,
+    ReportComponent,
   ],
   imports: [
     BrowserModule,
