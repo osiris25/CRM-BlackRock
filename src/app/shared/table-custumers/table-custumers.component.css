@@ -1,7 +1,6 @@
 body{
   background: #E5E5E5;
   width: 100%;
-  /* overflow: scroll; */
 }
 
 table {
@@ -24,9 +23,6 @@ table {
     font-family: 'Archivo Black', sans-serif;;
     font-size: 35px;
     font-weight:900;
-
-    /* float: left;
-    margin-left: 100px; */
   }
 
   .container-btn-new {
@@ -131,88 +127,5 @@ table {
   .main-background {
     background: #A5A5A5;
   }
-
-  /* @media(max-width: 768px){
-    .box-button {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-    }
-  } */
-
-  /* @media (max-width: 768px){
-    body{
-      background: #E5E5E5;
-      width: 100%;
-      overflow: scroll;
-    }
-
-    .box-button {
-      display: flex;
-      flex-direction: column;
-
-      margin-top: 35px;
-    }
-
-    .container-btn-new button {
-      color: white;
-      background-color: #FE4021;
-      cursor: pointer;
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: none;
-  
-      width: 140px;
-      height: 30px;
-    }
-
-    .title{
-      font-family: 'Archivo Black', sans-serif;;
-      font-size: 20px;
-      font-weight:900;
-    }
-
-    .title h1{
-      font-family: 'Archivo Black', sans-serif;;
-      font-size: 25px;
-      font-weight:900;
-    }
-
-    .container-btn-new{
-      margin: 0 auto;
-    }
-
-    .table {
-      width: 200px;
-      background: #E5E5E5;
-    }
-
-    .table-form-customer {
-      width: 100px;
-      height: 400px;
-  
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .container-btn-new {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-  
-      margin-right: 5%;
-  
-      margin-bottom: 15px;
-    }
-
-    .container-btn-new button:hover {
-      color: white;
-      background: black;
-    }
-  } */
 
   
