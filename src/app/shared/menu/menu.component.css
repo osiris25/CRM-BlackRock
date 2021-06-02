@@ -26,6 +26,7 @@
     position: absolute;
     right: 30px;
 }
+
 @media (min-width: 300px) and (max-width: 600px) {
     .usertools {
         display: none;

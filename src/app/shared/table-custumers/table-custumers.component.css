@@ -1,5 +1,7 @@
 body{
   background: #E5E5E5;
+  width: 100%;
+  /* overflow: scroll; */
 }
 
 table {
@@ -7,12 +9,24 @@ table {
     background: white;
   }
 
+  .main-background {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+  }
+
+  .backGround{
+    background: #E5E5E5;
+  }
+
   .title h1{
     font-family: 'Archivo Black', sans-serif;;
-    font-size: 30px;
+    font-size: 35px;
     font-weight:900;
 
-    margin-left: 130%;
+    /* float: left;
+    margin-left: 100px; */
   }
 
   .container-btn-new {
@@ -32,16 +46,20 @@ table {
     height: 200px;
   }
 
+  .box-button img{
+    margin-right: 20px;
+    margin-left: 90px;
+  }
+
   .container-btn-new {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 
     margin-right: 15%;
-    /* margin-top: -150px; */
+    margin-top: -150px;
 
     margin-bottom: 15px;
-    /* align-items:initial; */
   }
 
   .container-btn-new button:hover {
@@ -52,7 +70,6 @@ table {
   .container-btn-new button {
     width: 25%;
     color: white;
-    /* background: #FFCE00; */
     background-color: #FE4021;
     cursor: pointer;
   
@@ -75,10 +92,10 @@ table {
   }
 
   .filtro {
-    margin-left: 16%;
-
     font-weight: bold;
     font-size: 17px;
+
+    margin-left: 100px;
   }
 
   .background-filtro {
@@ -86,7 +103,7 @@ table {
   }
 
   .placeholder-filtro {
-    margin-left: 16%;
+    margin-left: 100px;
   }
 
   .edit-button {
@@ -102,11 +119,8 @@ table {
     height: 400px;
 
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    margin-left: 16%;
   }
 
   .name-customer-style {
@@ -118,78 +132,31 @@ table {
     background: #A5A5A5;
   }
 
-  @media (max-width: 768px){
-    body{
-      background: #E5E5E5;
-    }
-
-    .title{
-      font-family: 'Archivo Black', sans-serif;;
-      font-size: 15px;
-      font-weight:900;
-    }
-
-    .title h1{
-      font-family: 'Archivo Black', sans-serif;;
-      font-size: 25px;
-      font-weight:900;
-  
-      margin-left: 25%;
-    }
-
-    .container-btn-new{
+  /* @media(max-width: 768px){
+    .box-button {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-content: center;
     }
+  } */
 
-    .table {
-      width: 200px;
+  /* @media (max-width: 768px){
+    body{
       background: #E5E5E5;
-
-      /* overflow: scroll; */
+      width: 100%;
+      overflow: scroll;
     }
 
-    .mat-elevation-z8{
-      width: 100px;
-      height: 500px;
-
-      margin-left: 20%;
-      /* overflow: scroll; */
-    }
-
-    .table-form-customer {
-      width: 150px;
-      height: 500px;
-  
+    .box-button {
       display: flex;
-      /* flex-direction: row; */
-      justify-content: center;
-      align-items: center;
-  
-      margin-left: 40%;
+      flex-direction: column;
+
+      margin-top: 35px;
     }
-  
-    .container-btn-new {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-  
-      margin-right: 5%;
-  
-      margin-bottom: 15px;
-    }
-  
-    .container-btn-new button:hover {
-      color: white;
-      background: black;
-    }
-  
+
     .container-btn-new button {
-      /* width: 25%; */
       color: white;
-      /* background: #FFCE00; */
       background-color: #FE4021;
       cursor: pointer;
     
@@ -201,6 +168,51 @@ table {
       width: 140px;
       height: 30px;
     }
-  }
+
+    .title{
+      font-family: 'Archivo Black', sans-serif;;
+      font-size: 20px;
+      font-weight:900;
+    }
+
+    .title h1{
+      font-family: 'Archivo Black', sans-serif;;
+      font-size: 25px;
+      font-weight:900;
+    }
+
+    .container-btn-new{
+      margin: 0 auto;
+    }
+
+    .table {
+      width: 200px;
+      background: #E5E5E5;
+    }
+
+    .table-form-customer {
+      width: 100px;
+      height: 400px;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .container-btn-new {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  
+      margin-right: 5%;
+  
+      margin-bottom: 15px;
+    }
+
+    .container-btn-new button:hover {
+      color: white;
+      background: black;
+    }
+  } */
 
   
