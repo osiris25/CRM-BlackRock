@@ -1,32 +1,26 @@
-<div id="tabla">
-<h2>Basic HTML Table</h2>
+<div class="container">
+	<div class="row">
+		<div id="htmlData">
+			<h2>Lista de videojuegos en stock</h2>
+			<table class="table table-bordered mt-4">
+				<tr class="table-primary">
+					<th>Id</th>
+					<th>Name</th>
+					<th>Platform</th>
+					<th>Reference</th>
+				</tr>
+				<tr *ngFor="let game of VIDEOGAMES">
+					<th>{{game.id}}</th>
+					<td>{{game.name}}</td>
+					<td>{{game.platform}}</td>
+					<td>{{game.reference}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
 
-<table style="width:100%">
-	<tr>
-		<th>Firstname</th>
-		<th>Lastname</th>
-		<th>Age</th>
-	</tr>
-	<tr>
-		<td>Jill</td>
-		<td>Smith</td>
-		<td>50</td>
-	</tr>
-	<tr>
-		<td>Eve</td>
-		<td>Jackson</td>
-		<td>94</td>
-	</tr>
-	<tr>
-		<td>John</td>
-		<td>Doe</td>
-		<td>80</td>
-	</tr>
-</table>
-</div>
-<div class="row">
-	<button (click)="generarPDF()" >Imprimir tabla</button>
-</div>
-<div class="row">
-	<button (click)="generarPDF()">Imprimir tabla</button>
+
+<div>
+	<button class="btn col col-lg-4 btn-danger btn-block ml-4" (click)="generarPDF()">Download PDF</button>
 </div>
