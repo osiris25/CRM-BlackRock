@@ -1,30 +1,35 @@
-<div class="reporter-main-container">
-	<div class="title-container">
-		<h1 class="title">Reporte de oportunidad</h1>
+<div id="print-container">
+	<div class="reporter-main-container">
+		<div class="title-container">
+			<h1 class="title">Reporte de oportunidad</h1>
+		</div>
+		<div class="img-container">
+			<img class="pdf-img" (click)="generarPDF()" src='../../../assets/img/file-pdf.svg'>
+		</div>
 	</div>
-	<div class="img-container">
-		<img class="pdf-img" src='assets/img/file-pdf.svg'>
+	<div class="container-information">
+		<div class="reporter-sheet">
+			<div class="container-blk-title">
+				<div class="blk-title">
+					<h2><b>BlackRock</b></h2>
+					<p>Cierre de compra</p>
+				</div>
+			</div>
+			<div class="customer-info">
+				<div class="customer-info-right"><p><b>Fecha:</b> Junio 2, 2021</p></div>
+				<div class="customer-info-center"><p><b>Cliente:</b> Wendy Rivas</p></div>
+				<div class="customer-info-left"><p><b>Contacto:</b> 55 33 44 88 99</p></div>
+			</div>
+			<hr class="line-reporte-oportunidad">
+			<div class="customer-info-two">
+				<div class="customer-info-two-right"><p><b>Atendió:</b> Carlos Habana</p></div>
+				<div class="customer-info-two-center"><p><b>Status de compra:</b> Cerrada</p></div>
+				<div class="customer-info-two-left"><p><b>Producto:</b> iShares MSCI China ETF</p></div>
+			</div>
+			<div class="amount">
+				<div class="amount-top"><p><b>Monto:</b> 2,858.8 USD</p></div>
+				<div><hr class="button-line"></div>
+			</div>
+		</div>
 	</div>
-</div>
-  <div class="container-information">
-	<div class="reporter-sheet">
-	<div class="blk-title">
-		<h2><b>BlackRock</b></h2>
-		<p>Cierre de compra</p>
-	</div>
-	<div class="customer-info">
-		<p><b>Fecha:</b> Junio 2, 2021</p>
-		<p><b>Cliente:</b> Wendy Rivas</p>
-   		<p><b>Contacto:</b> 55 33 44 88 99</p>
-	</div>
-	<!-- <img class="img-heart" src='assets/img/manos_corazon.png'> -->
-	<div class="customer-info-two">
-		<p><b>Atendió:</b> Carlos Habana</p>
-		<p><b>Status de compra:</b> Cerrada</p>
-		<p><b>Producto:</b> iShares MSCI China ETF</p>
-	</div>
-	<div class="amount">
-		<p><b>Monto:</b> 2,858.8 USD</p>
-	</div>
-  </div>
 </div>
