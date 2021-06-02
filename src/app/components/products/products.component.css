@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 70px;
+  margin-top:px;
+}
+
+.our-products-title{
+font-size: 35px;
 }
 
 .products-card{
@@ -11,13 +15,12 @@
   width: 70%;
   max-height: 220px;
   border-radius: 2px;
-  border: #FFCE00;
   margin: 3%;
   display: inline block;
   /*text-align: center;*/
   /*align-items: center;*/
   transition: all .25s linear;
-  border-color: #F94613;
+  border-color:#FFCE00;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
 }
 .products-card:hover{
