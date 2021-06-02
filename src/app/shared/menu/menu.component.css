@@ -23,9 +23,6 @@
     background-color: #FFCE00;
 }
 .usertools {
-    /* display: flex;
-    flex-direction: row;
-    align-items: center; */
     position: absolute;
     right: 30px;
 }

@@ -3,11 +3,17 @@ table {
     background: white;
   }
 
+  .main-background {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+  }
+
   .title h1{
     font-family: 'Archivo Black', sans-serif;;
-    font-size: 30px;
+    font-size: 35px;
     font-weight:900;
-
   }
 
   .container-btn-new {
@@ -74,10 +80,10 @@ table {
 
     font-weight: bold;
     font-size: 17px;
-  }
+	}
 
   .placeholder-filtro {
-    margin-left: 16%;
+    margin-left: 100px;
   }
 
   .edit-button {
@@ -93,7 +99,6 @@ table {
     height: 350px;
 
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
