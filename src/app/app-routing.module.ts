@@ -7,14 +7,21 @@ import { OpportunityComponent } from './components/opportunity/opportunity.compo
 import { ProductsComponent } from './components/products/products.component';
 import { PromotersComponent } from './components/promoters/promoters.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ContainerAppComponent } from './components/pages/container-app/container-app.component';
 
 const routes: Routes = [
-	{ path: "login", component: LoginComponent, pathMatch: "full"},
-	{path:"home", component:HomeComponent, canActivate:[AuthGuard]},
+	{
+		path: '', component: ContainerAppComponent,
+		children: [
+			{path:"home", component:HomeComponent, canActivate:[AuthGuard]},
 	{path:"customers", component:CustomersComponent, canActivate:[AuthGuard]},
 	{path:"products", component:ProductsComponent, canActivate:[AuthGuard]},
 	{path:"opportunity", component:OpportunityComponent, canActivate:[AuthGuard]},
 	{path:"promoters", component:PromotersComponent, canActivate:[AuthGuard]},
+		]
+	},
+	{ path: "login", component: LoginComponent, pathMatch: "full"},
+	
 ];
 
 // pathMatch:"full", redirectTo: "login",
