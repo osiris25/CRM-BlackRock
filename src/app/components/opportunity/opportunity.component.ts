@@ -138,6 +138,11 @@ export class OpportunityComponent implements OnInit {
 
     })
   }
-
+ onViewDetail(data: string){
+  console.log('Hola detalle')
+ }
+ openOpportunity(data: string){
+  console.log('Hola detalle')
+ }
 
 }
