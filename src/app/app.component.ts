@@ -8,12 +8,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'CrmBlackRock';
-  showMenu = false;
+  showMenu = true;
   routsMenu = ['/home', '/customers'];
   constructor(private route: Router) {
     this.route.events.subscribe((res: any) => {
-      if (res.url && this.routsMenu.indexOf(res.url) > -1) {
-        this.showMenu = true;
+      if (res.url === '/login'){
+        console.log(res)
+        //this.showMenu = true;
       }
     });
   }

@@ -23,12 +23,34 @@
     background-color: #FFCE00;
 }
 .usertools {
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
     position: absolute;
     right: 30px;
 }
+
+.span-align{
+  margin-bottom: 0px;
+}
+
+.welcome-align{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 @media (min-width: 300px) and (max-width: 600px) {
-    .usertools {
-        display: none;
-        color: #fff;
-    }
+.navbar {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  height: 65px;
+  z-index: 1000;
+  cursor: pointer;
+}
+.usertools {
+  display: none;
+  color: #fff;
+}
 }
