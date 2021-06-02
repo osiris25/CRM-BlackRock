@@ -97,11 +97,21 @@ font-weight: bolder;
 @media (max-width: 768px) {
 
 .card-box{
-  margin-left: 300px;
+  margin-left: 5%;
 }
 
 .promoter-card{
   width: 65%;
+}
+.our-customers{
+	display: flex;
+	margin-top: 20%;
+	margin-left: 5% ;
+}
+.our-customers-title{
+position: relative;
+padding-top:2%;
+
 }
 }
 
