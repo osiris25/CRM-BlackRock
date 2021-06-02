@@ -1,0 +1,18 @@
+<h2>{{ data.message }}</h2>
+<mat-dialog-content class="dialog-content">
+  <div *ngIf="data.view=='createcustomer'; ">
+    <app-create-customer></app-create-customer>
+  </div>
+  <div *ngIf="data.view=='editcustomer'; ">
+    <app-edit-customer [customerInput]="data.content"></app-edit-customer>
+  </div>
+  <div *ngIf="data.view=='opportunity';">
+    <app-create-opportunity></app-create-opportunity>
+  </div>
+  <div *ngIf="data.view=='editOpportunity';">
+    <app-edit-opportunity [OpportunityInput]="data.content"></app-edit-opportunity>
+  </div>
+  <ng-template #showNewForm>
+    <app-create-customer></app-create-customer>
+  </ng-template>
+</mat-dialog-content>

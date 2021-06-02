@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import Customer from '../customers.model';
+// import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +20,8 @@ export class CustomersService {
     return this.customerRef;
   }
 
-  create(tutorial: Customer): any {
-    return this.customerRef.add({ ...tutorial });
+  create(customer: Customer): any {
+    return this.customerRef.add({ ...customer });
   }
 
   update(id: string, data: any): Promise<void> {
@@ -29,5 +30,8 @@ export class CustomersService {
 
   delete(id: string): Promise<void> {
     return this.customerRef.doc(id).delete();
+  }
+  updateCustomer(customer: Customer) {
+    return this.customerRef.doc(customer.id).update(customer);
   }
 }

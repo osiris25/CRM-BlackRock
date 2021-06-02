@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.loginContainer{
+  background: url('../../../assets/img/skateboard.jpeg') no-repeat center;
+  background-origin: content-box;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.firstContainer{
+  width: 50%;
+  height: 100vh;
+}
+
+.firstContainer span{
+text-align: left;
+margin-top: 60px;
+margin-left: 60px;
+}
+.firstContainer span h1{
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 60px;
+  }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 70px;
+}
+
+.secondContainer{
+  width:50%;
+  height: 100%;
+ /* background-color: #FFFFFF;
+  opacity: 0.6;*/
+}
+
+.welcome{
+  font-family: 'Noto Sans', sans-serif;
+  width: 90%;
+  margin: 100px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  display: inline-block;
+  text-align: left;
+}
+
+.welcome h2{
+  font-size: 35px;
+}
+
+.wlcm{
+  font-size: 20px;
+}
+
+.text-center{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 25px;
+  margin: 130px;
+  margin-bottom: 80px;
+  margin-left: 67px;
+  display: inline-block;
+  text-align: left;
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*label{
+  font-family: 'Noto Sans', sans-serif;
+}*/
+
+.email-container, .pass-container{
+  position:relative;
+  margin-bottom: 25px;
+}
+
+.email-container label{
+  position: absolute;
+	top:0px;
+	left:0px;
+	font-size:18px;
+	color:#979797;
+  pointer-events:none;
+	transition: all 0.5s ease-in-out;
+}
+
+.pass-container label{
+  position:absolute;
+	top:0px;
+	left:0px;
+	font-size:18px;
+	color:#979797;
+  pointer-events:none;
+	transition: all 0.5s ease-in-out;
+}
+
+.email-container input{
+  border:0;
+  border-bottom:2px solid #979797;
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#000000;
+}
+
+.pass-container input{
+  border:0;
+  border-bottom:2px solid #979797;
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#000000;
+}
+
+.email-container input:focus{
+  border:none;
+  outline:none;
+  border-bottom:1px solid #FE4021;
+ }
+
+ .pass-container input:focus{
+  border:none;
+  outline:none;
+  border-bottom:1px solid #FE4021;
+ }
+
+ .btnL{
+	color:#000000;
+	background-color:#FE4021;
+	outline: none;
+  border: 0;
+  color: #000000;
+	padding:10px 20px;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+}
+
+.btnL:hover{
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.email-container input:focus ~ label,
+.email-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+}
+
+.pass-container input:focus ~ label,
+.pass-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+}
+
+.logout{
+  display:none;
+}
+
+@media (min-width: 300px) and (max-width: 768px){
+.loginContainer{
+   min-height: 100vh;
+   max-height: 100vh;
+   min-width: 100vw;
+   max-width: 100vw;
+   flex-direction: column;
+   text-align: center;
+   overflow: hidden;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 45px;
+}
+.firstContainer{
+  display: flex;
+  text-align: center;
+  width:100%;
+  height: auto;
+}
+
+.firstContainer span{
+  margin: 40px 0 20px 0;
+}
+
+.welcome{
+  font-family: 'Noto Sans', sans-serif;
+  width: 90%;
+  margin: 10px 0;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.welcome h2{
+  font-size: 22px;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+}
+
+.wlcm{
+  font-size: 16px;
+  margin-bottom: 0px;
+  width: 90%;
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+  margin-right: 190px;
+  margin-left: 10%;
+}
+
+.secondContainer{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(255, 255, 255, .6)
+}
+
+.text-center{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  margin: 30px 0;
+  margin-bottom: 40px;
+  margin-left: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.btnL{
+	color:#000000;
+	background-color:#FE4021;
+	outline: none;
+  border: 0;
+  color: #000000;
+	padding:8px 13px;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+}
+
+.btnL:hover{
+  background: #000000;
+  color: #FFFFFF;
+}
+
+}
+
+
+
+
+

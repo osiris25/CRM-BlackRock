@@ -1,0 +1,56 @@
+<div class="new-customer-container">
+    <form [formGroup]="editOpportunityForm" (ngSubmit)="editOpportunity(editOpportunityForm.value)">
+        
+        <mat-form-field class="hiddenId" >
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Id del cliente" type="text" formControlName="id">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Cliente" formControlName="name">
+                <mat-option value="Alta">Alta</mat-option>
+                <mat-option value="Media">Media</mat-option>
+                <mat-option value="Baja">Baja</mat-option>
+                <!-- <mat-option *ngFor=" let promoter of PromotersData;" [value] ="promoter.id">{{promoter.name}}</mat-option> -->
+            </mat-select>
+          </mat-form-field>
+
+
+        <!-- <mat-form-field>
+            <mat-label>Correo</mat-label>
+            <input matInput placeholder="correo" type="text" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Teléfono</mat-label>
+            <input matInput placeholder="teléfono" type="text" formControlName="phone">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Compañía</mat-label>
+            <input matInput placeholder="Compañía" type="text" formControlName="company">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select  placeholder="Prioridad"  formControlName="priority" >
+                <mat-option value="Alta">Alta</mat-option>
+                <mat-option value="Media">Media</mat-option>
+                <mat-option value="Baja">Baja</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select  placeholder="Tipo de cliente"  formControlName="customerType" >
+                <mat-option value="Potencial">Potencial</mat-option>
+                <mat-option value="Existente">Existente</mat-option>
+            </mat-select>
+        </mat-form-field> -->
+
+        <div class="container-button">
+            <input type="submit" mat-dialog-close class="mat-flat-button" value="Actualizar">
+        </div>
+
+    </form>
+</div>
+
+<p>editar oport</p>

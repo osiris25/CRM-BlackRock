@@ -1,0 +1,44 @@
+
+<div class=our-customers>
+	<diV class="our-customers-img"><img src="../../../assets/img/mano.svg"/></diV>
+	<div class="our-customers-title">
+		<p>Nuestros</p>
+		 <p>promotores</p>
+		</div>
+</div>
+<div class="cards-container">
+  <div class="filter">
+    <select>
+      <option>Filtrar por:</option>
+      <option value="value1">Banco</option>
+      <option value="value2">Nombre</option>
+      <option value="value3">Producto</option>
+    </select>
+  </div>
+    <div class="card-box">
+    <div class="promoter-card" *ngFor="let promoter of promoterData">
+      <!-- <img src="{{promoter.photo}}" alt="" width="200" height="200"> -->
+        <div class="text-card">
+          <div class="contact">
+            <h3><b>{{promoter.bank}}</b></h3>
+            <img class="bank-img" src='assets/img/bank.svg'/>
+            <h4><b>{{promoter.name}}</b></h4>
+          </div>
+        <div class="contact-promoter">
+          <div class="phone-promoter">
+            <img class="call-img" src='assets/img/call.svg'/>
+            <p>{{promoter.phone}}</p>
+          </div>
+          <div class="email-promoter">
+            <img class="email-img" src="assets/img/email.svg"/>
+            <p>{{promoter.email}}</p>
+          </div>
+        </div>
+        <div class="ishare-info">
+            <p class="ishare"><b>iShares</b></p>
+            <hr>
+            <p class="ishare" *ngFor="let ishare of promoter.product">{{ishare}}</p>
+        </div>
+    </div>
+    </div>
+</div>

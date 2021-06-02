@@ -1,0 +1,56 @@
+.navbar {
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    cursor: pointer;
+}
+.navbar .logo{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+}
+.logout {
+    position: absolute;
+    bottom: 30px;
+}
+.side {
+    width: 200px;
+    max-height: calc(100vh - 64px);
+    position: fixed;
+    top: 64px;
+    background-color: #FFCE00;
+}
+.usertools {
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+    position: absolute;
+    right: 30px;
+}
+
+.span-align{
+  margin-bottom: 0px;
+}
+
+.welcome-align{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+.navbar {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  height: 65px;
+  z-index: 1000;
+  cursor: pointer;
+}
+.usertools {
+  display: none;
+  color: #fff;
+}
+}

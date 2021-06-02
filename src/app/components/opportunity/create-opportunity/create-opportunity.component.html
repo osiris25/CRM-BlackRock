@@ -1,0 +1,50 @@
+<div class="new-customer-container">
+  <form [formGroup]="newOpportunityForm" (ngSubmit)="addNewOpportunity(newOpportunityForm.value)" >
+    <mat-form-field>
+      <mat-select placeholder="Cliente" formControlName="id_customer">
+        <mat-option *ngFor=" let customer of CustomersData;" [value]="customer.id">{{customer.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Propietario" formControlName="id_promoter">
+        <mat-option *ngFor=" let promoter of PromotersData;" [value] ="promoter.id">{{promoter.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Status" formControlName="status">
+        <mat-option value="Listo">Listo</mat-option>
+        <mat-option value="Contactado">Contactado</mat-option>
+        <mat-option value="Interrumpido">Interrumpido</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select [(ngModel)]="opcionSeleccionado" placeholder="Producto" formControlName="id_product" (selectionChange)="capturar($event)">
+        <mat-option *ngFor=" let product of ProductsData;" [value]="product.id">{{product.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p [hidden]="opcionSeleccionado == '0'">Haz seleccionado la opción # {{ verSeleccion }}</p>
+
+    <mat-form-field>
+      <mat-label>Precio</mat-label>
+      <input
+        matInput
+        placeholder="Precio"
+        type="text"
+        formControlName="price"
+      />
+    </mat-form-field>
+
+    <div class="container-button">
+      <input
+        type="submit"
+        mat-dialog-close
+        class="mat-flat-button"
+        value="Guardar"
+      />
+    </div>
+  </form>
+</div>

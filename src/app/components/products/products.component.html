@@ -1,1 +1,57 @@
-<p>products works!</p>
+
+  <div class="products-container">
+      <div class="our-products-title">
+        <h1><b>Nuestros Productos</b></h1>
+      </div>
+    <div class="products-card" *ngFor="let product of productData">
+      <div class="products-card-flex">
+        <div class="products-img">
+          <img class="thicker" src="{{product.img}}" alt="" width="200" height="200"/>
+        </div>
+        <div class="text-info-card">
+              <div class="text-container">
+                <h1>{{product.name}}</h1>
+                <div class="badge-assets">
+                  <p *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                    <b *ngIf="item.key=='badge'">{{item.value}}</b>
+                  </p>
+                  <p *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                    <b *ngIf="item.key=='assets'">{{item.value}}</b>
+                  </p>
+              </div>
+              <div>
+              <div class="row-info">
+                <div class="price-info">
+                    <p><b>NAV a {{product.dateTheoreticalPrice}}</b></p>
+                    <p><b>USD {{product.theoreticalPrice}}</b></p>
+                </div>
+                <div class="keyfactor">
+                    <p *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                      <b *ngIf="item.key=='average'">Plazo promedio ponderado: {{item.value}}%</b>
+                    </p>
+                      <p *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                      <b *ngIf="item.key=='commissions'">Comisiones: {{item.value}}%</b>
+                      </p>
+                      <p *ngFor = "let item of product.keyFactor | keyvalue; let i=index;">
+                      <b *ngIf="item.key=='duration'">Duración efectiva: {{item.value}}%</b>
+                      </p>
+                </div>
+                <div class="average">
+                      <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
+                        <b *ngIf="item.key=='annualPercentage'">Porcentaje anual: {{item.value}}%</b>
+                      </p>
+                      <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
+                        <b *ngIf="item.key=='year'">A un año: {{item.value}}%</b>
+                      </p>
+                      <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
+                        <b *ngIf="item.key=='atThtree'">A tres años: {{item.value}}%</b>
+                      </p>
+                      <p *ngFor = "let item of product.performance | keyvalue; let i=index;">
+                        <b *ngIf="item.key=='atFive'">A cinco año: {{item.value}}%</b>
+                      </p>
+                  </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>

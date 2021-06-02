@@ -1,0 +1,126 @@
+.card-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.card-box{
+  display: flex;
+  flex-flow: row wrap;
+	justify-content: space-around;
+  margin-top: 2%;
+  margin-left: 5%;
+	margin-right: 5%;
+}
+
+.promoter-card{
+  display:block;
+  background: #FFFFFF;
+  width: 26%;
+  min-height: 30%;
+  border-radius: 2px;
+  margin: 3%;
+  display:inline-block;
+  /*text-align: center;*/
+  align-items: center;
+  transition: all .25s linear;
+  border-color: #FFFFFF;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+}
+
+.promoter-card:hover{
+  box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.bank-img{
+ height: 10%;
+ width:8%;
+ margin-top: -15px;
+}
+
+.contact-promoter{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ width: 90%;
+ margin: 5%
+}
+
+.phone-promoter, .email-promoter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.email-img, .call-img{
+  height: 10%;
+  width:10%;
+}
+
+.ishare-info{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.ishare{
+  margin-left: 5%;
+}
+.our-customers{
+	display: flex;
+	margin-top: 10%;
+	margin-left: 5% ;
+}
+.our-customers-title{
+position: relative;
+padding-top:2%;
+
+}
+.our-customers-title p{
+font-size: 2em;
+font-weight: bolder;
+}
+.filter{
+	display: none;
+}
+
+
+@media (max-width: 768px) {
+
+.card-box{
+  margin-left: 5%;
+}
+
+.promoter-card{
+  width: 65%;
+}
+.our-customers{
+	display: flex;
+	margin-top: 20%;
+	margin-left: 5% ;
+}
+.our-customers-title{
+position: relative;
+padding-top:2%;
+
+}
+}
+
+@media (max-width: 360px) {
+.card-box{
+  margin-left: 80px;
+}
+
+.promoter-card{
+  width: 85%;
+  }
+}
